@@ -29,7 +29,7 @@ import java.util.Map;
 import java.util.Properties;
 
 public class HybridServer implements AutoCloseable {
-  private static final int SERVICE_PORT = 8889;
+  private static final int SERVICE_PORT = 8888;
   private Thread serverThread;
   private boolean stop;
 
