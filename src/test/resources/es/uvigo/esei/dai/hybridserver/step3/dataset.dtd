@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT dataset (hstestdb.HTML+)>
+<!ELEMENT hstestdb.HTML EMPTY>
+<!ATTLIST hstestdb.HTML
+	uuid CDATA #REQUIRED
+	content CDATA #REQUIRED
+>
