@@ -29,7 +29,7 @@ import java.util.Map;
 import java.util.Properties;
 
 public class HybridServer implements AutoCloseable {
-  private static final int SERVICE_PORT = 8888;
+  private static final int SERVICE_PORT = 8889;
   private Thread serverThread;
   private boolean stop;
 
@@ -60,7 +60,7 @@ public class HybridServer implements AutoCloseable {
                 break;
 
               // TODO Responder al cliente
-              String mensaje =
+              String html_bienvenida =
                       """
                       <!DOCTYPE html>
                       <html>
@@ -80,7 +80,7 @@ public class HybridServer implements AutoCloseable {
                       """;
               OutputStream outStream = socket.getOutputStream();
 
-              int len = mensaje.length();
+              int len = html_bienvenida.length();
               // Parte cabecera
               outStream.write("HTTP/1.1 200 OK\r\n".getBytes()); // Escribimos cabecera. Hay que pasaralo a bytes, ya que es lo que maneja el socket
               outStream.write(("Content-Length: "+len+"\r\n").getBytes());
@@ -88,7 +88,7 @@ public class HybridServer implements AutoCloseable {
               outStream.write("\r\n".getBytes());
               // Fin parte cabecera
 
-              outStream.write(mensaje.getBytes());
+              outStream.write(html_bienvenida.getBytes());
               outStream.flush();
             }
           }
