@@ -1,34 +1,14 @@
 -------------------------------------------------------------------------------
 Test set: es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 0, Errors: 7, Skipped: 0, Time elapsed: 0.515 s <<< FAILURE! -- in es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest
-es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.testPostInvalidContent -- Time elapsed: 0.441 s <<< ERROR!
-java.sql.SQLException: Access denied for user 'hsdb'@'localhost' (using password: YES)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:113)
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:861)
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:449)
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:234)
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
-	at org.dbunit.JdbcDatabaseTester.getConnection(JdbcDatabaseTester.java:116)
-	at es.uvigo.esei.dai.hybridserver.utils.MySqlJdbcDatabaseTester.getConnection(MySqlJdbcDatabaseTester.java:44)
-	at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.setUpJdbc(JdbcTestCase.java:37)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	Suppressed: java.lang.NullPointerException: Cannot invoke "es.uvigo.esei.dai.hybridserver.HybridServer.close()" because "this.server" is null
-		at es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.stopServer(ClientRequestsWithDatabaseTest.java:87)
-		... 3 more
-	Suppressed: java.lang.NullPointerException: Cannot invoke "org.dbunit.database.IDatabaseConnection.close()" because "this.connection" is null
-		at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.tearDownJdbc(JdbcTestCase.java:48)
-		... 3 more
+Tests run: 7, Failures: 0, Errors: 7, Skipped: 0, Time elapsed: 0.198 s <<< FAILURE! -- in es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest
+es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.testPostInvalidContent -- Time elapsed: 0.181 s <<< ERROR!
+com.mysql.cj.jdbc.exceptions.CommunicationsException: 
+Communications link failure
 
-es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.testPost -- Time elapsed: 0.019 s <<< ERROR!
-java.sql.SQLException: Access denied for user 'hsdb'@'localhost' (using password: YES)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:113)
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:861)
 	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:449)
 	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:234)
@@ -38,66 +18,47 @@ java.sql.SQLException: Access denied for user 'hsdb'@'localhost' (using password
 	at org.dbunit.JdbcDatabaseTester.getConnection(JdbcDatabaseTester.java:116)
 	at es.uvigo.esei.dai.hybridserver.utils.MySqlJdbcDatabaseTester.getConnection(MySqlJdbcDatabaseTester.java:44)
 	at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.setUpJdbc(JdbcTestCase.java:37)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	Suppressed: java.lang.NullPointerException: Cannot invoke "es.uvigo.esei.dai.hybridserver.HybridServer.close()" because "this.server" is null
 		at es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.stopServer(ClientRequestsWithDatabaseTest.java:87)
 		... 3 more
 	Suppressed: java.lang.NullPointerException: Cannot invoke "org.dbunit.database.IDatabaseConnection.close()" because "this.connection" is null
 		at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.tearDownJdbc(JdbcTestCase.java:48)
 		... 3 more
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
 
-es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.testGetInvalidResource -- Time elapsed: 0.011 s <<< ERROR!
-java.sql.SQLException: Access denied for user 'hsdb'@'localhost' (using password: YES)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:113)
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:861)
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:449)
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:234)
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
-	at org.dbunit.JdbcDatabaseTester.getConnection(JdbcDatabaseTester.java:116)
-	at es.uvigo.esei.dai.hybridserver.utils.MySqlJdbcDatabaseTester.getConnection(MySqlJdbcDatabaseTester.java:44)
-	at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.setUpJdbc(JdbcTestCase.java:37)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	Suppressed: java.lang.NullPointerException: Cannot invoke "es.uvigo.esei.dai.hybridserver.HybridServer.close()" because "this.server" is null
-		at es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.stopServer(ClientRequestsWithDatabaseTest.java:87)
-		... 3 more
-	Suppressed: java.lang.NullPointerException: Cannot invoke "org.dbunit.database.IDatabaseConnection.close()" because "this.connection" is null
-		at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.tearDownJdbc(JdbcTestCase.java:48)
-		... 3 more
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:139)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:980)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:851)
+	... 11 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:576)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:666)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 14 more
 
-es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.testGetInvalidHtmlPage -- Time elapsed: 0.011 s <<< ERROR!
-java.sql.SQLException: Access denied for user 'hsdb'@'localhost' (using password: YES)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:113)
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:861)
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:449)
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:234)
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
-	at org.dbunit.JdbcDatabaseTester.getConnection(JdbcDatabaseTester.java:116)
-	at es.uvigo.esei.dai.hybridserver.utils.MySqlJdbcDatabaseTester.getConnection(MySqlJdbcDatabaseTester.java:44)
-	at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.setUpJdbc(JdbcTestCase.java:37)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	Suppressed: java.lang.NullPointerException: Cannot invoke "es.uvigo.esei.dai.hybridserver.HybridServer.close()" because "this.server" is null
-		at es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.stopServer(ClientRequestsWithDatabaseTest.java:87)
-		... 3 more
-	Suppressed: java.lang.NullPointerException: Cannot invoke "org.dbunit.database.IDatabaseConnection.close()" because "this.connection" is null
-		at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.tearDownJdbc(JdbcTestCase.java:48)
-		... 3 more
+es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.testPost -- Time elapsed: 0.003 s <<< ERROR!
+com.mysql.cj.jdbc.exceptions.CommunicationsException: 
+Communications link failure
 
-es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.testGetHtmlList -- Time elapsed: 0.010 s <<< ERROR!
-java.sql.SQLException: Access denied for user 'hsdb'@'localhost' (using password: YES)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:113)
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:861)
 	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:449)
 	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:234)
@@ -107,43 +68,47 @@ java.sql.SQLException: Access denied for user 'hsdb'@'localhost' (using password
 	at org.dbunit.JdbcDatabaseTester.getConnection(JdbcDatabaseTester.java:116)
 	at es.uvigo.esei.dai.hybridserver.utils.MySqlJdbcDatabaseTester.getConnection(MySqlJdbcDatabaseTester.java:44)
 	at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.setUpJdbc(JdbcTestCase.java:37)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	Suppressed: java.lang.NullPointerException: Cannot invoke "es.uvigo.esei.dai.hybridserver.HybridServer.close()" because "this.server" is null
 		at es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.stopServer(ClientRequestsWithDatabaseTest.java:87)
 		... 3 more
 	Suppressed: java.lang.NullPointerException: Cannot invoke "org.dbunit.database.IDatabaseConnection.close()" because "this.connection" is null
 		at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.tearDownJdbc(JdbcTestCase.java:48)
 		... 3 more
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
 
-es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.testDelete -- Time elapsed: 0.010 s <<< ERROR!
-java.sql.SQLException: Access denied for user 'hsdb'@'localhost' (using password: YES)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:113)
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:861)
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:449)
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:234)
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
-	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
-	at org.dbunit.JdbcDatabaseTester.getConnection(JdbcDatabaseTester.java:116)
-	at es.uvigo.esei.dai.hybridserver.utils.MySqlJdbcDatabaseTester.getConnection(MySqlJdbcDatabaseTester.java:44)
-	at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.setUpJdbc(JdbcTestCase.java:37)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	Suppressed: java.lang.NullPointerException: Cannot invoke "es.uvigo.esei.dai.hybridserver.HybridServer.close()" because "this.server" is null
-		at es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.stopServer(ClientRequestsWithDatabaseTest.java:87)
-		... 3 more
-	Suppressed: java.lang.NullPointerException: Cannot invoke "org.dbunit.database.IDatabaseConnection.close()" because "this.connection" is null
-		at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.tearDownJdbc(JdbcTestCase.java:48)
-		... 3 more
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:139)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:980)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:851)
+	... 11 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:576)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:666)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 14 more
 
-es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.testDeleteNonexistentPage -- Time elapsed: 0.009 s <<< ERROR!
-java.sql.SQLException: Access denied for user 'hsdb'@'localhost' (using password: YES)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:113)
+es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.testGetInvalidResource -- Time elapsed: 0.003 s <<< ERROR!
+com.mysql.cj.jdbc.exceptions.CommunicationsException: 
+Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
 	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:861)
 	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:449)
 	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:234)
@@ -153,13 +118,237 @@ java.sql.SQLException: Access denied for user 'hsdb'@'localhost' (using password
 	at org.dbunit.JdbcDatabaseTester.getConnection(JdbcDatabaseTester.java:116)
 	at es.uvigo.esei.dai.hybridserver.utils.MySqlJdbcDatabaseTester.getConnection(MySqlJdbcDatabaseTester.java:44)
 	at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.setUpJdbc(JdbcTestCase.java:37)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	Suppressed: java.lang.NullPointerException: Cannot invoke "es.uvigo.esei.dai.hybridserver.HybridServer.close()" because "this.server" is null
 		at es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.stopServer(ClientRequestsWithDatabaseTest.java:87)
 		... 3 more
 	Suppressed: java.lang.NullPointerException: Cannot invoke "org.dbunit.database.IDatabaseConnection.close()" because "this.connection" is null
 		at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.tearDownJdbc(JdbcTestCase.java:48)
 		... 3 more
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:139)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:980)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:851)
+	... 11 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:576)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:666)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 14 more
+
+es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.testGetInvalidHtmlPage -- Time elapsed: 0.002 s <<< ERROR!
+com.mysql.cj.jdbc.exceptions.CommunicationsException: 
+Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:861)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:449)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:234)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at org.dbunit.JdbcDatabaseTester.getConnection(JdbcDatabaseTester.java:116)
+	at es.uvigo.esei.dai.hybridserver.utils.MySqlJdbcDatabaseTester.getConnection(MySqlJdbcDatabaseTester.java:44)
+	at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.setUpJdbc(JdbcTestCase.java:37)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "es.uvigo.esei.dai.hybridserver.HybridServer.close()" because "this.server" is null
+		at es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.stopServer(ClientRequestsWithDatabaseTest.java:87)
+		... 3 more
+	Suppressed: java.lang.NullPointerException: Cannot invoke "org.dbunit.database.IDatabaseConnection.close()" because "this.connection" is null
+		at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.tearDownJdbc(JdbcTestCase.java:48)
+		... 3 more
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:139)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:980)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:851)
+	... 11 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:576)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:666)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 14 more
+
+es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.testGetHtmlList -- Time elapsed: 0.002 s <<< ERROR!
+com.mysql.cj.jdbc.exceptions.CommunicationsException: 
+Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:861)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:449)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:234)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at org.dbunit.JdbcDatabaseTester.getConnection(JdbcDatabaseTester.java:116)
+	at es.uvigo.esei.dai.hybridserver.utils.MySqlJdbcDatabaseTester.getConnection(MySqlJdbcDatabaseTester.java:44)
+	at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.setUpJdbc(JdbcTestCase.java:37)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "es.uvigo.esei.dai.hybridserver.HybridServer.close()" because "this.server" is null
+		at es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.stopServer(ClientRequestsWithDatabaseTest.java:87)
+		... 3 more
+	Suppressed: java.lang.NullPointerException: Cannot invoke "org.dbunit.database.IDatabaseConnection.close()" because "this.connection" is null
+		at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.tearDownJdbc(JdbcTestCase.java:48)
+		... 3 more
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:139)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:980)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:851)
+	... 11 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:576)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:666)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 14 more
+
+es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.testDelete -- Time elapsed: 0.002 s <<< ERROR!
+com.mysql.cj.jdbc.exceptions.CommunicationsException: 
+Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:861)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:449)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:234)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at org.dbunit.JdbcDatabaseTester.getConnection(JdbcDatabaseTester.java:116)
+	at es.uvigo.esei.dai.hybridserver.utils.MySqlJdbcDatabaseTester.getConnection(MySqlJdbcDatabaseTester.java:44)
+	at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.setUpJdbc(JdbcTestCase.java:37)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "es.uvigo.esei.dai.hybridserver.HybridServer.close()" because "this.server" is null
+		at es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.stopServer(ClientRequestsWithDatabaseTest.java:87)
+		... 3 more
+	Suppressed: java.lang.NullPointerException: Cannot invoke "org.dbunit.database.IDatabaseConnection.close()" because "this.connection" is null
+		at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.tearDownJdbc(JdbcTestCase.java:48)
+		... 3 more
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:139)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:980)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:851)
+	... 11 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:576)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:666)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 14 more
+
+es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.testDeleteNonexistentPage -- Time elapsed: 0.002 s <<< ERROR!
+com.mysql.cj.jdbc.exceptions.CommunicationsException: 
+Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:165)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:55)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:861)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:449)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:234)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at org.dbunit.JdbcDatabaseTester.getConnection(JdbcDatabaseTester.java:116)
+	at es.uvigo.esei.dai.hybridserver.utils.MySqlJdbcDatabaseTester.getConnection(MySqlJdbcDatabaseTester.java:44)
+	at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.setUpJdbc(JdbcTestCase.java:37)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "es.uvigo.esei.dai.hybridserver.HybridServer.close()" because "this.server" is null
+		at es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.stopServer(ClientRequestsWithDatabaseTest.java:87)
+		... 3 more
+	Suppressed: java.lang.NullPointerException: Cannot invoke "org.dbunit.database.IDatabaseConnection.close()" because "this.connection" is null
+		at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.tearDownJdbc(JdbcTestCase.java:48)
+		... 3 more
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:52)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:95)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:140)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:156)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:79)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:139)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:980)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:851)
+	... 11 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:576)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:666)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+	... 14 more
 

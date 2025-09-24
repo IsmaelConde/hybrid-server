@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETRootTest
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 8, Errors: 1, Skipped: 0, Time elapsed: 0.007 s <<< FAILURE! -- in es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETRootTest
+Tests run: 10, Failures: 8, Errors: 1, Skipped: 0, Time elapsed: 0.012 s <<< FAILURE! -- in es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETRootTest
 es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETRootTest.testGetResourceChain -- Time elapsed: 0.001 s <<< FAILURE!
 java.lang.AssertionError: 
 
@@ -10,17 +10,17 @@ Expected: is "/"
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
 	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETRootTest.testGetResourceChain(HTTPRequestGETRootTest.java:44)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETRootTest.testToString -- Time elapsed: 0 s <<< ERROR!
+es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETRootTest.testToString -- Time elapsed: 0.001 s <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "es.uvigo.esei.dai.hybridserver.http.HTTPRequestMethod.name()" because the return value of "es.uvigo.esei.dai.hybridserver.http.HTTPRequest.getMethod()" is null
 	at es.uvigo.esei.dai.hybridserver.http.HTTPRequest.toString(HTTPRequest.java:76)
 	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETRootTest.testToString(HTTPRequestGETRootTest.java:85)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
 es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETRootTest.testGetHttpVersion -- Time elapsed: 0.001 s <<< FAILURE!
 java.lang.AssertionError: 
@@ -30,9 +30,9 @@ Expected: is "HTTP/1.1"
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
 	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETRootTest.testGetHttpVersion(HTTPRequestGETRootTest.java:59)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
 es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETRootTest.testGetHeaderParameters -- Time elapsed: 0 s <<< FAILURE!
 java.lang.AssertionError: 
@@ -42,9 +42,9 @@ Expected: map containing ["Host"->"localhost"]
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
 	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETRootTest.testGetHeaderParameters(HTTPRequestGETRootTest.java:69)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
 es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETRootTest.testGetResourceName -- Time elapsed: 0 s <<< FAILURE!
 java.lang.AssertionError: 
@@ -54,9 +54,9 @@ Expected: is an empty string
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
 	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETRootTest.testGetResourceName(HTTPRequestGETRootTest.java:54)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
 es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETRootTest.testGetResourcePath -- Time elapsed: 0.001 s <<< FAILURE!
 java.lang.AssertionError: 
@@ -66,9 +66,9 @@ Expected: is an empty array
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
 	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETRootTest.testGetResourcePath(HTTPRequestGETRootTest.java:49)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
 es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETRootTest.testGetMethod -- Time elapsed: 0.001 s <<< FAILURE!
 java.lang.AssertionError: 
@@ -78,11 +78,11 @@ Expected: is <GET>
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
 	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETRootTest.testGetMethod(HTTPRequestGETRootTest.java:39)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETRootTest.testGetContentLength -- Time elapsed: 0 s <<< FAILURE!
+es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETRootTest.testGetContentLength -- Time elapsed: 0.001 s <<< FAILURE!
 java.lang.AssertionError: 
 
 Expected: is <0>
@@ -90,11 +90,11 @@ Expected: is <0>
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
 	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETRootTest.testGetContentLength(HTTPRequestGETRootTest.java:80)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETRootTest.testGetResourceParameters -- Time elapsed: 0 s <<< FAILURE!
+es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETRootTest.testGetResourceParameters -- Time elapsed: 0.001 s <<< FAILURE!
 java.lang.AssertionError: 
 
 Expected: is a map with size <0>
@@ -102,7 +102,7 @@ Expected: is a map with size <0>
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
 	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETRootTest.testGetResourceParameters(HTTPRequestGETRootTest.java:64)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 

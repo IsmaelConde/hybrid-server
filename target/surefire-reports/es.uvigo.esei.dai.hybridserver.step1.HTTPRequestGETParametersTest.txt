@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETParametersTest
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 8, Errors: 1, Skipped: 0, Time elapsed: 0.011 s <<< FAILURE! -- in es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETParametersTest
+Tests run: 10, Failures: 8, Errors: 1, Skipped: 0, Time elapsed: 0.012 s <<< FAILURE! -- in es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETParametersTest
 es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETParametersTest.testGetResourceChain -- Time elapsed: 0 s <<< FAILURE!
 java.lang.AssertionError: 
 
@@ -10,17 +10,17 @@ Expected: is "/hello/world.html?country=Spain&province=Ourense&city=Ourense"
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
 	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETParametersTest.testGetResourceChain(HTTPRequestGETParametersTest.java:45)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETParametersTest.testToString -- Time elapsed: 0 s <<< ERROR!
+es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETParametersTest.testToString -- Time elapsed: 0.001 s <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "es.uvigo.esei.dai.hybridserver.http.HTTPRequestMethod.name()" because the return value of "es.uvigo.esei.dai.hybridserver.http.HTTPRequest.getMethod()" is null
 	at es.uvigo.esei.dai.hybridserver.http.HTTPRequest.toString(HTTPRequest.java:76)
 	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETParametersTest.testToString(HTTPRequestGETParametersTest.java:95)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
 es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETParametersTest.testGetHttpVersion -- Time elapsed: 0.001 s <<< FAILURE!
 java.lang.AssertionError: 
@@ -30,11 +30,11 @@ Expected: is "HTTP/1.1"
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
 	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETParametersTest.testGetHttpVersion(HTTPRequestGETParametersTest.java:62)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETParametersTest.testGetHeaderParameters -- Time elapsed: 0.001 s <<< FAILURE!
+es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETParametersTest.testGetHeaderParameters -- Time elapsed: 0 s <<< FAILURE!
 java.lang.AssertionError: 
 
 Expected: (map containing ["Host"->"localhost"] and map containing ["Accept"->"text/html"] and map containing ["Accept-Encoding"->"gzip,deflate"])
@@ -42,9 +42,9 @@ Expected: (map containing ["Host"->"localhost"] and map containing ["Accept"->"t
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
 	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETParametersTest.testGetHeaderParameters(HTTPRequestGETParametersTest.java:76)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
 es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETParametersTest.testGetResourceName -- Time elapsed: 0.001 s <<< FAILURE!
 java.lang.AssertionError: 
@@ -54,9 +54,9 @@ Expected: is "hello/world.html"
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
 	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETParametersTest.testGetResourceName(HTTPRequestGETParametersTest.java:57)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
 es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETParametersTest.testGetResourcePath -- Time elapsed: 0.001 s <<< FAILURE!
 java.lang.AssertionError: 
@@ -66,11 +66,11 @@ Expected: is ["hello", "world.html"]
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
 	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETParametersTest.testGetResourcePath(HTTPRequestGETParametersTest.java:52)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETParametersTest.testGetMethod -- Time elapsed: 0 s <<< FAILURE!
+es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETParametersTest.testGetMethod -- Time elapsed: 0.001 s <<< FAILURE!
 java.lang.AssertionError: 
 
 Expected: is <GET>
@@ -78,9 +78,9 @@ Expected: is <GET>
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
 	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETParametersTest.testGetMethod(HTTPRequestGETParametersTest.java:40)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
 es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETParametersTest.testGetContentLength -- Time elapsed: 0.001 s <<< FAILURE!
 java.lang.AssertionError: 
@@ -90,11 +90,11 @@ Expected: is <0>
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
 	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETParametersTest.testGetContentLength(HTTPRequestGETParametersTest.java:90)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
-es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETParametersTest.testGetResourceParameters -- Time elapsed: 0 s <<< FAILURE!
+es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETParametersTest.testGetResourceParameters -- Time elapsed: 0.001 s <<< FAILURE!
 java.lang.AssertionError: 
 
 Expected: (map containing ["country"->"Spain"] and map containing ["province"->"Ourense"] and map containing ["city"->"Ourense"])
@@ -102,7 +102,7 @@ Expected: (map containing ["country"->"Spain"] and map containing ["province"->"
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
 	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
 	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestGETParametersTest.testGetResourceParameters(HTTPRequestGETParametersTest.java:67)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 
