@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: es.uvigo.esei.dai.hybridserver.step1.HTTPResponseTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.001 s <<< FAILURE! -- in es.uvigo.esei.dai.hybridserver.step1.HTTPResponseTest
+es.uvigo.esei.dai.hybridserver.step1.HTTPResponseTest.testPrint -- Time elapsed: 0.001 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is "HTTP/1.1 200 OK\r\nContent-Length: 11\r\n\r\nHello World"
+     but: was ""
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at es.uvigo.esei.dai.hybridserver.step1.HTTPResponseTest.testPrint(HTTPResponseTest.java:36)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+

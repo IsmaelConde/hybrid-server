@@ -1,0 +1,120 @@
+-------------------------------------------------------------------------------
+Test set: es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 9, Errors: 1, Skipped: 0, Time elapsed: 0.013 s <<< FAILURE! -- in es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest
+es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetResourceChain -- Time elapsed: 0.001 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is "/"
+     but: was null
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetResourceChain(HTTPRequestPOSTEncodedTest.java:56)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testToString -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "es.uvigo.esei.dai.hybridserver.http.HTTPRequestMethod.name()" because the return value of "es.uvigo.esei.dai.hybridserver.http.HTTPRequest.getMethod()" is null
+	at es.uvigo.esei.dai.hybridserver.http.HTTPRequest.toString(HTTPRequest.java:76)
+	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testToString(HTTPRequestPOSTEncodedTest.java:113)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetHttpVersion -- Time elapsed: 0 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is "HTTP/1.1"
+     but: was null
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetHttpVersion(HTTPRequestPOSTEncodedTest.java:71)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetHeaderParameters -- Time elapsed: 0 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: (map containing ["Host"->"localhost"] and map containing ["Content-Type"->"application/x-www-form-urlencoded"] and map containing ["Content-Length"->"116"])
+     but: map containing ["Host"->"localhost"] was null
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetHeaderParameters(HTTPRequestPOSTEncodedTest.java:88)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetResourceName -- Time elapsed: 0 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is an empty string
+     but: was null
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetResourceName(HTTPRequestPOSTEncodedTest.java:66)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetResourcePath -- Time elapsed: 0.001 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is an empty array
+     but: was null
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetResourcePath(HTTPRequestPOSTEncodedTest.java:61)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetContent -- Time elapsed: 0.001 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is "message=Hello world!!&mensaje=¡¡Hola mundo!!&mensaxe=Ola mundo!!&mensagem=Olá mundo!!"
+     but: was null
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetContent(HTTPRequestPOSTEncodedTest.java:100)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetMethod -- Time elapsed: 0.001 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is <POST>
+     but: was null
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetMethod(HTTPRequestPOSTEncodedTest.java:51)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetContentLength -- Time elapsed: 0.001 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is <116>
+     but: was <-1>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetContentLength(HTTPRequestPOSTEncodedTest.java:108)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetResourceParameters -- Time elapsed: 0.001 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: (map containing ["message"->"Hello world!!"] and map containing ["mensaje"->"¡¡Hola mundo!!"] and map containing ["mensaxe"->"Ola mundo!!"] and map containing ["mensagem"->"Olá mundo!!"])
+     but: map containing ["message"->"Hello world!!"] was null
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetResourceParameters(HTTPRequestPOSTEncodedTest.java:76)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+

@@ -1,0 +1,165 @@
+-------------------------------------------------------------------------------
+Test set: es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 7, Skipped: 0, Time elapsed: 0.515 s <<< FAILURE! -- in es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest
+es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.testPostInvalidContent -- Time elapsed: 0.441 s <<< ERROR!
+java.sql.SQLException: Access denied for user 'hsdb'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:113)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:861)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:449)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:234)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at org.dbunit.JdbcDatabaseTester.getConnection(JdbcDatabaseTester.java:116)
+	at es.uvigo.esei.dai.hybridserver.utils.MySqlJdbcDatabaseTester.getConnection(MySqlJdbcDatabaseTester.java:44)
+	at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.setUpJdbc(JdbcTestCase.java:37)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "es.uvigo.esei.dai.hybridserver.HybridServer.close()" because "this.server" is null
+		at es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.stopServer(ClientRequestsWithDatabaseTest.java:87)
+		... 3 more
+	Suppressed: java.lang.NullPointerException: Cannot invoke "org.dbunit.database.IDatabaseConnection.close()" because "this.connection" is null
+		at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.tearDownJdbc(JdbcTestCase.java:48)
+		... 3 more
+
+es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.testPost -- Time elapsed: 0.019 s <<< ERROR!
+java.sql.SQLException: Access denied for user 'hsdb'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:113)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:861)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:449)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:234)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at org.dbunit.JdbcDatabaseTester.getConnection(JdbcDatabaseTester.java:116)
+	at es.uvigo.esei.dai.hybridserver.utils.MySqlJdbcDatabaseTester.getConnection(MySqlJdbcDatabaseTester.java:44)
+	at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.setUpJdbc(JdbcTestCase.java:37)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "es.uvigo.esei.dai.hybridserver.HybridServer.close()" because "this.server" is null
+		at es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.stopServer(ClientRequestsWithDatabaseTest.java:87)
+		... 3 more
+	Suppressed: java.lang.NullPointerException: Cannot invoke "org.dbunit.database.IDatabaseConnection.close()" because "this.connection" is null
+		at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.tearDownJdbc(JdbcTestCase.java:48)
+		... 3 more
+
+es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.testGetInvalidResource -- Time elapsed: 0.011 s <<< ERROR!
+java.sql.SQLException: Access denied for user 'hsdb'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:113)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:861)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:449)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:234)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at org.dbunit.JdbcDatabaseTester.getConnection(JdbcDatabaseTester.java:116)
+	at es.uvigo.esei.dai.hybridserver.utils.MySqlJdbcDatabaseTester.getConnection(MySqlJdbcDatabaseTester.java:44)
+	at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.setUpJdbc(JdbcTestCase.java:37)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "es.uvigo.esei.dai.hybridserver.HybridServer.close()" because "this.server" is null
+		at es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.stopServer(ClientRequestsWithDatabaseTest.java:87)
+		... 3 more
+	Suppressed: java.lang.NullPointerException: Cannot invoke "org.dbunit.database.IDatabaseConnection.close()" because "this.connection" is null
+		at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.tearDownJdbc(JdbcTestCase.java:48)
+		... 3 more
+
+es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.testGetInvalidHtmlPage -- Time elapsed: 0.011 s <<< ERROR!
+java.sql.SQLException: Access denied for user 'hsdb'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:113)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:861)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:449)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:234)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at org.dbunit.JdbcDatabaseTester.getConnection(JdbcDatabaseTester.java:116)
+	at es.uvigo.esei.dai.hybridserver.utils.MySqlJdbcDatabaseTester.getConnection(MySqlJdbcDatabaseTester.java:44)
+	at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.setUpJdbc(JdbcTestCase.java:37)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "es.uvigo.esei.dai.hybridserver.HybridServer.close()" because "this.server" is null
+		at es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.stopServer(ClientRequestsWithDatabaseTest.java:87)
+		... 3 more
+	Suppressed: java.lang.NullPointerException: Cannot invoke "org.dbunit.database.IDatabaseConnection.close()" because "this.connection" is null
+		at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.tearDownJdbc(JdbcTestCase.java:48)
+		... 3 more
+
+es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.testGetHtmlList -- Time elapsed: 0.010 s <<< ERROR!
+java.sql.SQLException: Access denied for user 'hsdb'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:113)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:861)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:449)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:234)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at org.dbunit.JdbcDatabaseTester.getConnection(JdbcDatabaseTester.java:116)
+	at es.uvigo.esei.dai.hybridserver.utils.MySqlJdbcDatabaseTester.getConnection(MySqlJdbcDatabaseTester.java:44)
+	at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.setUpJdbc(JdbcTestCase.java:37)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "es.uvigo.esei.dai.hybridserver.HybridServer.close()" because "this.server" is null
+		at es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.stopServer(ClientRequestsWithDatabaseTest.java:87)
+		... 3 more
+	Suppressed: java.lang.NullPointerException: Cannot invoke "org.dbunit.database.IDatabaseConnection.close()" because "this.connection" is null
+		at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.tearDownJdbc(JdbcTestCase.java:48)
+		... 3 more
+
+es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.testDelete -- Time elapsed: 0.010 s <<< ERROR!
+java.sql.SQLException: Access denied for user 'hsdb'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:113)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:861)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:449)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:234)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at org.dbunit.JdbcDatabaseTester.getConnection(JdbcDatabaseTester.java:116)
+	at es.uvigo.esei.dai.hybridserver.utils.MySqlJdbcDatabaseTester.getConnection(MySqlJdbcDatabaseTester.java:44)
+	at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.setUpJdbc(JdbcTestCase.java:37)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "es.uvigo.esei.dai.hybridserver.HybridServer.close()" because "this.server" is null
+		at es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.stopServer(ClientRequestsWithDatabaseTest.java:87)
+		... 3 more
+	Suppressed: java.lang.NullPointerException: Cannot invoke "org.dbunit.database.IDatabaseConnection.close()" because "this.connection" is null
+		at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.tearDownJdbc(JdbcTestCase.java:48)
+		... 3 more
+
+es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.testDeleteNonexistentPage -- Time elapsed: 0.009 s <<< ERROR!
+java.sql.SQLException: Access denied for user 'hsdb'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:113)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:861)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:449)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:234)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:683)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230)
+	at org.dbunit.JdbcDatabaseTester.getConnection(JdbcDatabaseTester.java:116)
+	at es.uvigo.esei.dai.hybridserver.utils.MySqlJdbcDatabaseTester.getConnection(MySqlJdbcDatabaseTester.java:44)
+	at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.setUpJdbc(JdbcTestCase.java:37)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	Suppressed: java.lang.NullPointerException: Cannot invoke "es.uvigo.esei.dai.hybridserver.HybridServer.close()" because "this.server" is null
+		at es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.stopServer(ClientRequestsWithDatabaseTest.java:87)
+		... 3 more
+	Suppressed: java.lang.NullPointerException: Cannot invoke "org.dbunit.database.IDatabaseConnection.close()" because "this.connection" is null
+		at es.uvigo.esei.dai.hybridserver.utils.JdbcTestCase.tearDownJdbc(JdbcTestCase.java:48)
+		... 3 more
+

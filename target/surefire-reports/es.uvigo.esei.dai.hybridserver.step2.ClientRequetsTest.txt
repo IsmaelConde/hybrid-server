@@ -1,0 +1,99 @@
+-------------------------------------------------------------------------------
+Test set: es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 8, Errors: 0, Skipped: 0, Time elapsed: 0.052 s <<< FAILURE! -- in es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest
+es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest.testPostInvalidContent -- Time elapsed: 0.009 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is <400>
+     but: was <200>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest.testPostInvalidContent(ClientRequetsTest.java:157)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest.testPost -- Time elapsed: 0.010 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is not null
+     but: was null
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest.testPost(ClientRequetsTest.java:110)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest.testGetInvalidResource -- Time elapsed: 0.007 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is <400>
+     but: was <200>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest.testGetInvalidResource(ClientRequetsTest.java:143)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest.testGetInvalidHtmlPage -- Time elapsed: 0.004 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is <404>
+     but: was <200>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest.testGetInvalidHtmlPage(ClientRequetsTest.java:136)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest.testGetHtmlList -- Time elapsed: 0.004 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: a string containing "6df1047e-cf19-4a83-8cf3-38f5e53f7725"
+     but: was "Hybrid Server"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest.testGetHtmlList(ClientRequetsTest.java:98)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest.testGetHtmlPage -- Time elapsed: 0.003 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: a string containing "This is the html page 6df1047e-cf19-4a83-8cf3-38f5e53f7725."
+     but: was "Hybrid Server"
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest.testGetHtmlPage(ClientRequetsTest.java:85)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest.testDelete -- Time elapsed: 0.004 s <<< FAILURE!
+java.lang.AssertionError: 
+The page already exists
+Expected: is <404>
+     but: was <200>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest.testDelete(ClientRequetsTest.java:128)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest.testDeleteNonexistentPage -- Time elapsed: 0.004 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: is <404>
+     but: was <200>
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
+	at es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest.testDeleteNonexistentPage(ClientRequetsTest.java:150)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
