@@ -20,6 +20,7 @@ package es.uvigo.esei.dai.hybridserver;
 import es.uvigo.esei.dai.hybridserver.http.HTTPHeaders;
 
 import java.io.*;
+import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.HashMap;
@@ -28,9 +29,12 @@ import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class HybridServer implements AutoCloseable {
-    private static final int SERVICE_PORT = 8888;
+    private static final int SERVICE_PORT = 8889;
     private Thread serverThread;
     private boolean stop;
+
+    final private String plantilla_footer =
+            new StringBuilder().append("<footer><a href=http://${ip_server}:").append(SERVICE_PORT).append(">Volver al inicio</a></footer>").toString();
 
     Map<String,String> pages = new ConcurrentHashMap<>();
 
@@ -88,13 +92,25 @@ public class HybridServer implements AutoCloseable {
                                               <body>
                                                 <h1>Hybrid Server</h1>
                                                 <hr>
-                                                <h2>Autores:</h2>
+                                                <h3>Autores:</h3>
                                                 <p>Daniel Domínguez Rosales</p>
                                                 <p>Ismael Conde Conde</p>
-                                                
+                                                <hr>
+                                                <h3>Crear página (POST)</h3>
+                                                <form action="/html" method="POST">
+                                                   <textarea name="html"></textarea>
+                                                   <button type="submit">Submit</button>
+                                                </form>
+                                                <hr>
+                                                <h3>Eliminar página(DELETE)</h3>
+                                                <form action="/delete" method="POST">
+                                                   <input type="text" placehorder="uuid" name="uuid"/>
+                                                   <button type="submit">Submit</button>
+                                                </form>
+                                                <hr>
                                                 <h3>Enlaces:</h3>
                                                     <ul>
-                                                      <li><a href="/htm">Ver listado de páginas HTML</a></li>
+                                                      <li><a href="/html">Ver listado de páginas HTML</a></li>
                                                     </ul>
                                               </body>
                                             </html>
@@ -107,60 +123,119 @@ public class HybridServer implements AutoCloseable {
                                     outStream.write(html_bienvenida.getBytes());
                                     outStream.flush();
 
-                                } else if (path.startsWith("/htm")) {      //Dos opciones, mostrar página concreta o lista
+                                } else if (path.contains("/html")) {      //Tres opciones, mostrar página creada, página concreta o lista
 
-                                    // Sacar parámetros si existen
-                                    String query = "";
-                                    int qIndex = path.indexOf("?");
-                                    if (qIndex != -1)
-                                        query = path.substring(qIndex + 1);
-
-                                    Map<String, String> params = new HashMap<>();
-                                    if (!query.isEmpty()) {
-                                        for (String pair : query.split("&")) {
-                                            String[] kv = pair.split("=");
-                                            if (kv.length == 2)
-                                                params.put(kv[0], kv[1]);
+                                    // Hay que mirar si recibe un POST
+                                    if("POST".equalsIgnoreCase(method)) {
+                                        // 1. Leer las cabeceras para obtener Content-Length
+                                        int contentLength = 0;
+                                        String headerLine;
+                                        while (!(headerLine = reader.readLine()).isEmpty()) {
+                                            if (headerLine.toLowerCase().startsWith("content-length:")) {
+                                                contentLength = Integer.parseInt(headerLine.split(":")[1].trim());
+                                            }
                                         }
-                                    }
 
-                                    if (params.containsKey("uuid")) {   //Página concreta
-                                        String id = params.get("uuid");
-                                        String page = pages.get(id);
-                                        if (page != null) {
-                                            outStream.write("HTTP/1.1 200 OK\r\n".getBytes());
-                                            outStream.write(("Content-Length: " + page.length() + "\r\n").getBytes());
+                                        // 2. Leer body según Content-Length
+                                        char[] bodyChars = new char[contentLength];
+                                        reader.read(bodyChars, 0, contentLength);
+                                        String body = new String(bodyChars);
+
+                                        // 3. Parsear body form-urlencoded
+                                        Map<String, String> formParams = new HashMap<>();
+                                        for (String pair : body.split("&")) {
+                                            String[] kv = pair.split("=", 2);
+                                            if (kv.length == 2) {
+                                                String key = java.net.URLDecoder.decode(kv[0], "UTF-8");
+                                                String value = java.net.URLDecoder.decode(kv[1], "UTF-8");
+                                                formParams.put(key, value);
+                                            }
+                                        }
+
+                                        String htmlContent = formParams.get("html");
+                                        if (htmlContent == null || htmlContent.isEmpty()) {
+                                            String response = "<h1>400 Bad Request</h1>Falta parámetro 'html'";
+                                            outStream.write("HTTP/1.1 400 Bad Request\r\n".getBytes());
+                                            outStream.write(("Content-Length: " + response.length() + "\r\n").getBytes());
                                             outStream.write("Content-Type: text/html\r\n".getBytes());
                                             outStream.write("\r\n".getBytes());
-                                            outStream.write(page.getBytes());
+                                            outStream.write(response.getBytes());
                                             outStream.flush();
-                                        } else {        //Página no encontrada
-                                            String body = "<h1>404 Not Found</h1>";
-                                            outStream.write("HTTP/1.1 404 Not Found\r\n".getBytes());
+                                        } else {
+                                            // 4. Generar UUID y guardar en pages
+                                            String uuid = java.util.UUID.randomUUID().toString();
+                                            pages.put(uuid, htmlContent);
+
+                                            // 5. Responder con enlace a la página creada
+                                            String response = String.format(
+                                                    "<!DOCTYPE html><html><body>Página creada. <a href='/html?uuid=%s'>%s</a>" + plantilla_footer.replace("${ip_server}", "localhost") + "</body></html>",
+                                                    uuid, uuid);
+
+                                            outStream.write("HTTP/1.1 200 OK\r\n".getBytes());
+                                            outStream.write(("Content-Length: " + response.getBytes().length + "\r\n").getBytes());
+                                            outStream.write("Content-Type: text/html; charset=UTF-8\r\n".getBytes());
+                                            outStream.write("\r\n".getBytes());
+                                            outStream.write(response.getBytes());
+                                            outStream.flush();
+                                        }
+
+                                    } else { // En caso de que sea un GET
+                                        // Sacar parámetros si existen
+                                        String query = "";
+                                        int qIndex = path.indexOf("?");
+                                        if (qIndex != -1)
+                                            query = path.substring(qIndex + 1);
+
+                                        Map<String, String> params = new HashMap<>();
+                                        if (!query.isEmpty()) {
+                                            for (String pair : query.split("&")) {
+                                                String[] kv = pair.split("=");
+                                                if (kv.length == 2)
+                                                    params.put(kv[0], kv[1]);
+                                            }
+                                        }
+
+                                        if (params.containsKey("uuid")) {   //Página concreta
+                                            String id = params.get("uuid");
+                                            String page = pages.get(id);
+                                            if (page != null) {
+                                                outStream.write("HTTP/1.1 200 OK\r\n".getBytes());
+                                                outStream.write(("Content-Length: " + page.length() + "\r\n").getBytes());
+                                                outStream.write("Content-Type: text/html\r\n".getBytes());
+                                                outStream.write("\r\n".getBytes());
+                                                outStream.write(page.getBytes());
+                                                outStream.flush();
+                                            } else {        //Página no encontrada
+                                                String body = "<h1>404 Not Found</h1>";
+                                                outStream.write("HTTP/1.1 404 Not Found\r\n".getBytes());
+                                                outStream.write(("Content-Length: " + body.length() + "\r\n").getBytes());
+                                                outStream.write("Content-Type: text/html\r\n".getBytes());
+                                                outStream.write("\r\n".getBytes());
+                                                outStream.write(body.getBytes());
+                                                outStream.flush();
+                                            }
+                                        } else {        //Listado de todas las páginas
+                                            StringBuilder sb = new StringBuilder();
+                                            sb.append(
+                                                    "<!DOCTYPE html><html><head><meta charset='UTF-8'><title>Listado</title></head><body>");
+                                            sb.append("<h1>Páginas HTML almacenadas</h1><ul>");
+                                            for (String id : pages.keySet()) {
+                                                sb.append("<li><a href='/html?uuid=").append(id).append("'>").append(id).append("</a></li>");
+                                            }
+                                            sb.append("</ul>");
+                                            sb.append(plantilla_footer.replace("${ip_server}", "localhost"));
+                                            sb.append("</body></html>");
+
+                                            String body = sb.toString();
+                                            outStream.write("HTTP/1.1 200 OK\r\n".getBytes());
                                             outStream.write(("Content-Length: " + body.length() + "\r\n").getBytes());
                                             outStream.write("Content-Type: text/html\r\n".getBytes());
                                             outStream.write("\r\n".getBytes());
                                             outStream.write(body.getBytes());
                                             outStream.flush();
                                         }
-                                    } else {        //Listado de todas las páginas
-                                        StringBuilder sb = new StringBuilder();
-                                        sb.append(
-                                                "<!DOCTYPE html><html><head><meta charset='UTF-8'><title>Listado</title></head><body>");
-                                        sb.append("<h1>Páginas HTML almacenadas</h1><ul>");
-                                        for (String id : pages.keySet()) {
-                                            sb.append("<li><a href='/htm?uuid=").append(id).append("'>").append(id).append("</a></li>");
-                                        }
-                                        sb.append("</ul></body></html>");
-
-                                        String body = sb.toString();
-                                        outStream.write("HTTP/1.1 200 OK\r\n".getBytes());
-                                        outStream.write(("Content-Length: " + body.length() + "\r\n").getBytes());
-                                        outStream.write("Content-Type: text/html\r\n".getBytes());
-                                        outStream.write("\r\n".getBytes());
-                                        outStream.write(body.getBytes());
-                                        outStream.flush();
                                     }
+
                                 } else {        //Recurso no encontrado
                                     String body = "<h1>404 Not Found</h1>";
                                     outStream.write("HTTP/1.1 404 Not Found\r\n".getBytes());

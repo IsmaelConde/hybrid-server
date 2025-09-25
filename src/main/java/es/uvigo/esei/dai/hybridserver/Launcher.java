@@ -25,31 +25,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class Launcher {
   public static void main(String[] args) {
     // TODO Ejecutar el servidor
-
-    Map<String,String> pages = new ConcurrentHashMap<>();
-
-    String plantilla_html =
-            """
-            <!DOCTYPE html>
-            <html>
-              <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>${uuid}</title>
-              </head>
-              <body>
-                <h1>Estas en la página con uuid: ${uuid}</h1>
-              </body>
-            </html>
-            """;
-
-    for(int i = 0; i < 5; i++){ // Creamos 5 uuid (5 secciones distintas)
-        String uuid = UUID.randomUUID().toString();
-        String pagina = plantilla_html.replace("${uuid}", uuid); // Sustituimos "${uuid}" por el uuid que se generó
-        pages.put(uuid, pagina);
-    }
-    final HybridServer server = new HybridServer(pages);
-
+    final HybridServer server = new HybridServer();
     server.start();
   }
 }
