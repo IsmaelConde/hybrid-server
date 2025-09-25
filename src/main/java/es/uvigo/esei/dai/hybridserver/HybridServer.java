@@ -34,7 +34,7 @@ public class HybridServer implements AutoCloseable {
     private boolean stop;
 
     final private String plantilla_footer = // Para reutilizar en la lista de secciones, a la hora de generar el id y a la hora de mostrar una sección
-            new StringBuilder().append("<footer><a href=http://${ip_server}:").append(SERVICE_PORT).append(">Volver al inicio</a></footer>").toString();
+            new StringBuilder().append("<hr><footer><a href=http://${ip_server}:").append(SERVICE_PORT).append(">Volver al inicio</a></footer>").toString();
 
     Map<String,String> pages = new ConcurrentHashMap<>();
 
