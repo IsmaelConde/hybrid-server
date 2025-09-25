@@ -28,7 +28,7 @@ import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class HybridServer implements AutoCloseable {
-    private static final int SERVICE_PORT = 8888;
+    private static final int SERVICE_PORT = 8889;
     private Thread serverThread;
     private boolean stop;
 
@@ -94,7 +94,7 @@ public class HybridServer implements AutoCloseable {
                                                 
                                                 <h3>Enlaces:</h3>
                                                     <ul>
-                                                      <li><a href="/html">Ver listado de páginas HTML</a></li>
+                                                      <li><a href="/htm">Ver listado de páginas HTML</a></li>
                                                     </ul>
                                               </body>
                                             </html>
@@ -107,7 +107,7 @@ public class HybridServer implements AutoCloseable {
                                     outStream.write(html_bienvenida.getBytes());
                                     outStream.flush();
 
-                                } else if (path.startsWith("/html")) {      //Dos opciones, mostrar página concreta o lista
+                                } else if (path.startsWith("/htm")) {      //Dos opciones, mostrar página concreta o lista
 
                                     // Sacar parámetros si existen
                                     String query = "";
@@ -149,7 +149,7 @@ public class HybridServer implements AutoCloseable {
                                                 "<!DOCTYPE html><html><head><meta charset='UTF-8'><title>Listado</title></head><body>");
                                         sb.append("<h1>Páginas HTML almacenadas</h1><ul>");
                                         for (String id : pages.keySet()) {
-                                            sb.append("<li><a href='/html?uuid=").append(id).append("'>").append(id).append("</a></li>");
+                                            sb.append("<li><a href='/htm?uuid=").append(id).append("'>").append(id).append("</a></li>");
                                         }
                                         sb.append("</ul></body></html>");
 
