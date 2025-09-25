@@ -102,12 +102,6 @@ public class HybridServer implements AutoCloseable {
                                                    <button type="submit">Submit</button>
                                                 </form>
                                                 <hr>
-                                                <h3>Eliminar página(DELETE)</h3>
-                                                <form action="/delete" method="POST">
-                                                   <input type="text" placehorder="uuid" name="uuid"/>
-                                                   <button type="submit">Submit</button>
-                                                </form>
-                                                <hr>
                                                 <h3>Enlaces:</h3>
                                                     <ul>
                                                       <li><a href="/html">Ver listado de páginas HTML</a></li>
