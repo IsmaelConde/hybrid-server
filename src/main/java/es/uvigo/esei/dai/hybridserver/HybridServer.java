@@ -113,7 +113,7 @@ public class HybridServer implements AutoCloseable {
 
                                     } else if (path.contains("/html")) {      //Tres opciones, mostrar página creada, página concreta o lista
 
-                                        // Hay que mirar si recibe un POST
+                                        // Hay que mirar si recibe un POST, un DELETE o un GET
                                         if("POST".equalsIgnoreCase(method)) {
                                             // Leer las cabeceras para obtener Content-Length
                                             int contentLength = 0;
