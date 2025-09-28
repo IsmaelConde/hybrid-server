@@ -184,7 +184,7 @@ public class HybridServer implements AutoCloseable {
                                                 pages.remove(uuid);
                                                 response = "<html><body><h1>Página con UUID " + uuid + " eliminada correctamente.</h1>" + insertFooter() + "</body></html>";
                                             }else{
-                                                response = "<html><body><h1>No se encontró ninguna página con UUID " + uuid + ".</h1>" + insertFooter() + "</body></html>";
+                                                response = "<html><body><h1>No se encontró ninguna página con UUID " + uuid + ".</h1>" + insertFooter() + "</body></html>"; // No se si poner esto como estado 404
                                             }
 
                                             // Responder
