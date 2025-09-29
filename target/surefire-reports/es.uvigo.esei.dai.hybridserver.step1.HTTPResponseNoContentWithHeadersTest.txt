@@ -1,16 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: es.uvigo.esei.dai.hybridserver.step1.HTTPResponseNoContentWithHeadersTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.002 s <<< FAILURE! -- in es.uvigo.esei.dai.hybridserver.step1.HTTPResponseNoContentWithHeadersTest
-es.uvigo.esei.dai.hybridserver.step1.HTTPResponseNoContentWithHeadersTest.testPrint -- Time elapsed: 0.001 s <<< FAILURE!
-java.lang.AssertionError: 
-
-Expected: a string starting with "HTTP/1.1 200 OK"
-     but: was ""
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
-	at es.uvigo.esei.dai.hybridserver.step1.HTTPResponseNoContentWithHeadersTest.testPrint(HTTPResponseNoContentWithHeadersTest.java:40)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in es.uvigo.esei.dai.hybridserver.step1.HTTPResponseNoContentWithHeadersTest

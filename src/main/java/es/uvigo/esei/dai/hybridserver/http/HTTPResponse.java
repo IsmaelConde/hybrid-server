@@ -1,101 +1,108 @@
-/**
- *  HybridServer
- *  Copyright (C) 2025 Miguel Reboiro-Jato
- *  
- *  This program is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
- *  
- *  This program is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU General Public License for more details.
- *  
- *  You should have received a copy of the GNU General Public License
- *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
- */
 package es.uvigo.esei.dai.hybridserver.http;
 
 import java.io.IOException;
 import java.io.StringWriter;
 import java.io.Writer;
-import java.util.List;
-import java.util.Map;
+import java.nio.charset.StandardCharsets;
+import java.util.*;
 
 public class HTTPResponse {
-  public HTTPResponse() {
-    // TODO Completar
-  }
+    private HTTPResponseStatus status;
+    private String version;
+    private String content;
+    private Map<String, String> parameters;
 
-  public HTTPResponseStatus getStatus() {
-    // TODO Completar
-    return null;
-  }
+    public HTTPResponse() {
 
-  public void setStatus(HTTPResponseStatus status) {
-    // TODO Completar
-  }
+        this.status = HTTPResponseStatus.S200;
+        this.version = "HTTP/1.1";
+        this.content = "";
+        this.parameters = new LinkedHashMap<>();
 
-  public String getVersion() {
-    // TODO Completar
-    return null;
-  }
-
-  public void setVersion(String version) {
-    // TODO Completar
-  }
-
-  public String getContent() {
-    // TODO Completar
-    return null;
-  }
-
-  public void setContent(String content) {
-    // TODO Completar
-  }
-
-  public Map<String, String> getParameters() {
-    // TODO Completar
-    return null;
-  }
-
-  public String putParameter(String name, String value) {
-    // TODO Completar
-    return null;
-  }
-
-  public boolean containsParameter(String name) {
-    // TODO Completar
-    return false;
-  }
-
-  public String removeParameter(String name) {
-    // TODO Completar
-    return null;
-  }
-
-  public void clearParameters() {
-    // TODO Completar
-  }
-
-  public List<String> listParameters() {
-    // TODO Completar
-    return null;
-  }
-
-  public void print(Writer writer) throws IOException {
-    // TODO Completar
-  }
-
-  @Override
-  public String toString() {
-    try (final StringWriter writer = new StringWriter()) {
-      this.print(writer);
-
-      return writer.toString();
-    } catch (IOException e) {
-      throw new RuntimeException("Unexpected I/O exception", e);
     }
-  }
+
+    public HTTPResponseStatus getStatus() {
+        return this.status;
+    }
+
+    public void setStatus(HTTPResponseStatus status) {
+        this.status = status;
+    }
+
+    public String getVersion() {
+        return this.version;
+    }
+
+    public void setVersion(String version) {
+        this.version = version;
+    }
+
+    public String getContent() {
+        return this.content;
+    }
+
+    public void setContent(String content) {
+        this.content = (content != null) ? content : "";
+    }
+
+    public Map<String, String> getParameters() {
+        return this.parameters;
+    }
+
+    public String putParameter(String name, String value) {
+        return this.parameters.put(name, value);
+    }
+
+    public boolean containsParameter(String name) {
+        return this.parameters.containsKey(name);
+    }
+
+    public String removeParameter(String name) {
+        return this.parameters.remove(name);
+    }
+
+    public void clearParameters() {
+        this.parameters.clear();
+    }
+
+    public List<String> listParameters() {
+        return new ArrayList<>(this.parameters.keySet());
+    }
+
+    public void print(Writer writer) throws IOException {
+        // Primera línea
+        writer.write(this.version + " " + this.status.getCode() + " " + this.status.getStatus() + "\r\n");
+
+// Añadir Content-Length solo si hay contenido
+        if (!this.content.isEmpty()) {
+            byte[] bodyBytes = this.content.getBytes(StandardCharsets.UTF_8);
+            this.parameters.put("Content-Length", String.valueOf(bodyBytes.length));
+        }
+
+// Escribir cabeceras
+        for (Map.Entry<String, String> entry : this.parameters.entrySet()) {
+            writer.write(entry.getKey() + ": " + entry.getValue() + "\r\n");
+        }
+
+// Línea en blanco
+        writer.write("\r\n");
+
+// Cuerpo
+        if (!this.content.isEmpty()) {
+            writer.write(this.content);
+        }
+
+
+        writer.flush();
+    }
+
+    @Override
+    public String toString() {
+        try (final StringWriter writer = new StringWriter()) {
+            this.print(writer);
+            return writer.toString();
+        } catch (IOException e) {
+            throw new RuntimeException("Unexpected I/O exception", e);
+        }
+    }
 }

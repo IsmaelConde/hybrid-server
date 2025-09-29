@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.016" tests="10" errors="1" skipped="0" failures="9">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.01" tests="10" errors="0" skipped="0" failures="0">
   <properties>
-    <property name="java.specification.version" value="19"/>
+    <property name="java.specification.version" value="25"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.class.path" value="C:\Users\dador\Documents\GitHub\hybrid-server\target\test-classes;C:\Users\dador\Documents\GitHub\hybrid-server\target\classes;C:\Users\dador\.m2\repository\jakarta\xml\ws\jakarta.xml.ws-api\4.0.0\jakarta.xml.ws-api-4.0.0.jar;C:\Users\dador\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.0\jakarta.xml.bind-api-4.0.0.jar;C:\Users\dador\.m2\repository\jakarta\xml\soap\jakarta.xml.soap-api\3.0.0\jakarta.xml.soap-api-3.0.0.jar;C:\Users\dador\.m2\repository\com\mysql\mysql-connector-j\8.4.0\mysql-connector-j-8.4.0.jar;C:\Users\dador\.m2\repository\com\google\protobuf\protobuf-java\3.25.1\protobuf-java-3.25.1.jar;C:\Users\dador\.m2\repository\com\sun\xml\ws\jaxws-rt\4.0.3\jaxws-rt-4.0.3.jar;C:\Users\dador\.m2\repository\com\sun\xml\bind\jaxb-impl\4.0.5\jaxb-impl-4.0.5.jar;C:\Users\dador\.m2\repository\com\sun\xml\bind\jaxb-core\4.0.5\jaxb-core-4.0.5.jar;C:\Users\dador\.m2\repository\org\glassfish\ha\ha-api\3.1.13\ha-api-3.1.13.jar;C:\Users\dador\.m2\repository\org\glassfish\external\management-api\3.2.3\management-api-3.2.3.jar;C:\Users\dador\.m2\repository\org\glassfish\gmbal\gmbal-api-only\4.0.3\gmbal-api-only-4.0.3.jar;C:\Users\dador\.m2\repository\org\jvnet\staxex\stax-ex\2.1.0\stax-ex-2.1.0.jar;C:\Users\dador\.m2\repository\com\sun\xml\stream\buffer\streambuffer\2.1.0\streambuffer-2.1.0.jar;C:\Users\dador\.m2\repository\org\jvnet\mimepull\mimepull\1.10.0\mimepull-1.10.0.jar;C:\Users\dador\.m2\repository\com\sun\xml\fastinfoset\FastInfoset\2.1.1\FastInfoset-2.1.1.jar;C:\Users\dador\.m2\repository\jakarta\mail\jakarta.mail-api\2.1.3\jakarta.mail-api-2.1.3.jar;C:\Users\dador\.m2\repository\org\eclipse\angus\angus-activation\2.0.2\angus-activation-2.0.2.jar;C:\Users\dador\.m2\repository\org\eclipse\angus\angus-mail\2.0.3\angus-mail-2.0.3.jar;C:\Users\dador\.m2\repository\com\sun\xml\messaging\saaj\saaj-impl\3.0.4\saaj-impl-3.0.4.jar;C:\Users\dador\.m2\repository\com\fasterxml\woodstox\woodstox-core\7.0.0\woodstox-core-7.0.0.jar;C:\Users\dador\.m2\repository\org\codehaus\woodstox\stax2-api\4.2.2\stax2-api-4.2.2.jar;C:\Users\dador\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.3\jakarta.activation-api-2.1.3.jar;C:\Users\dador\.m2\repository\jakarta\annotation\jakarta.annotation-api\3.0.0\jakarta.annotation-api-3.0.0.jar;C:\Users\dador\.m2\repository\org\junit\jupiter\junit-jupiter\5.13.4\junit-jupiter-5.13.4.jar;C:\Users\dador\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.13.4\junit-jupiter-api-5.13.4.jar;C:\Users\dador\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\dador\.m2\repository\org\junit\platform\junit-platform-commons\1.13.4\junit-platform-commons-1.13.4.jar;C:\Users\dador\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.13.4\junit-jupiter-engine-5.13.4.jar;C:\Users\dador\.m2\repository\org\junit\platform\junit-platform-suite-engine\1.13.4\junit-platform-suite-engine-1.13.4.jar;C:\Users\dador\.m2\repository\org\junit\platform\junit-platform-engine\1.13.4\junit-platform-engine-1.13.4.jar;C:\Users\dador\.m2\repository\org\junit\platform\junit-platform-suite-api\1.13.4\junit-platform-suite-api-1.13.4.jar;C:\Users\dador\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\dador\.m2\repository\org\junit\platform\junit-platform-suite-commons\1.13.4\junit-platform-suite-commons-1.13.4.jar;C:\Users\dador\.m2\repository\org\junit\platform\junit-platform-launcher\1.13.4\junit-platform-launcher-1.13.4.jar;C:\Users\dador\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.13.4\junit-jupiter-params-5.13.4.jar;C:\Users\dador\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\dador\.m2\repository\org\dbunit\dbunit\2.7.3\dbunit-2.7.3.jar;C:\Users\dador\.m2\repository\org\postgresql\postgresql\42.3.1\postgresql-42.3.1.jar;C:\Users\dador\.m2\repository\org\checkerframework\checker-qual\3.5.0\checker-qual-3.5.0.jar;C:\Users\dador\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.3.0.0\ojdbc8-19.3.0.0.jar;C:\Users\dador\.m2\repository\com\oracle\database\jdbc\ucp\19.3.0.0\ucp-19.3.0.0.jar;C:\Users\dador\.m2\repository\com\oracle\database\security\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar;C:\Users\dador\.m2\repository\com\oracle\database\security\osdt_cert\19.3.0.0\osdt_cert-19.3.0.0.jar;C:\Users\dador\.m2\repository\com\oracle\database\security\osdt_core\19.3.0.0\osdt_core-19.3.0.0.jar;C:\Users\dador\.m2\repository\com\oracle\database\ha\simplefan\19.3.0.0\simplefan-19.3.0.0.jar;C:\Users\dador\.m2\repository\com\oracle\database\ha\ons\19.3.0.0\ons-19.3.0.0.jar;C:\Users\dador\.m2\repository\org\apache\httpcomponents\fluent-hc\4.5.14\fluent-hc-4.5.14.jar;C:\Users\dador\.m2\repository\org\apache\httpcomponents\httpclient\4.5.14\httpclient-4.5.14.jar;C:\Users\dador\.m2\repository\org\apache\httpcomponents\httpcore\4.4.16\httpcore-4.4.16.jar;C:\Users\dador\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\dador\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\dador\.m2\repository\org\slf4j\slf4j-api\2.0.7\slf4j-api-2.0.7.jar;C:\Users\dador\.m2\repository\org\slf4j\slf4j-simple\2.0.7\slf4j-simple-2.0.7.jar;"/>
@@ -11,303 +11,77 @@
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="user.timezone" value="Europe/Madrid"/>
     <property name="os.name" value="Windows 10"/>
-    <property name="java.vm.specification.version" value="19"/>
-    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.version" value="25"/>
     <property name="user.country" value="ES"/>
-    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-19\bin"/>
-    <property name="sun.java.command" value="C:\Users\dador\AppData\Local\Temp\surefire7519655154944485880\surefirebooter-20250924230845750_3.jar C:\Users\dador\AppData\Local\Temp\surefire7519655154944485880 2025-09-24T23-08-45_646-jvmRun1 surefire-20250924230845750_1tmp surefire_0-20250924230845750_2tmp"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Users\dador\.jdks\openjdk-25\bin"/>
+    <property name="sun.java.command" value="C:\Users\dador\AppData\Local\Temp\surefire7148053979717070945\surefirebooter-20250929192239303_3.jar C:\Users\dador\AppData\Local\Temp\surefire7148053979717070945 2025-09-29T19-22-39_208-jvmRun1 surefire-20250929192239303_1tmp surefire_0-20250929192239303_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\dador\Documents\GitHub\hybrid-server\target\test-classes;C:\Users\dador\Documents\GitHub\hybrid-server\target\classes;C:\Users\dador\.m2\repository\jakarta\xml\ws\jakarta.xml.ws-api\4.0.0\jakarta.xml.ws-api-4.0.0.jar;C:\Users\dador\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.0\jakarta.xml.bind-api-4.0.0.jar;C:\Users\dador\.m2\repository\jakarta\xml\soap\jakarta.xml.soap-api\3.0.0\jakarta.xml.soap-api-3.0.0.jar;C:\Users\dador\.m2\repository\com\mysql\mysql-connector-j\8.4.0\mysql-connector-j-8.4.0.jar;C:\Users\dador\.m2\repository\com\google\protobuf\protobuf-java\3.25.1\protobuf-java-3.25.1.jar;C:\Users\dador\.m2\repository\com\sun\xml\ws\jaxws-rt\4.0.3\jaxws-rt-4.0.3.jar;C:\Users\dador\.m2\repository\com\sun\xml\bind\jaxb-impl\4.0.5\jaxb-impl-4.0.5.jar;C:\Users\dador\.m2\repository\com\sun\xml\bind\jaxb-core\4.0.5\jaxb-core-4.0.5.jar;C:\Users\dador\.m2\repository\org\glassfish\ha\ha-api\3.1.13\ha-api-3.1.13.jar;C:\Users\dador\.m2\repository\org\glassfish\external\management-api\3.2.3\management-api-3.2.3.jar;C:\Users\dador\.m2\repository\org\glassfish\gmbal\gmbal-api-only\4.0.3\gmbal-api-only-4.0.3.jar;C:\Users\dador\.m2\repository\org\jvnet\staxex\stax-ex\2.1.0\stax-ex-2.1.0.jar;C:\Users\dador\.m2\repository\com\sun\xml\stream\buffer\streambuffer\2.1.0\streambuffer-2.1.0.jar;C:\Users\dador\.m2\repository\org\jvnet\mimepull\mimepull\1.10.0\mimepull-1.10.0.jar;C:\Users\dador\.m2\repository\com\sun\xml\fastinfoset\FastInfoset\2.1.1\FastInfoset-2.1.1.jar;C:\Users\dador\.m2\repository\jakarta\mail\jakarta.mail-api\2.1.3\jakarta.mail-api-2.1.3.jar;C:\Users\dador\.m2\repository\org\eclipse\angus\angus-activation\2.0.2\angus-activation-2.0.2.jar;C:\Users\dador\.m2\repository\org\eclipse\angus\angus-mail\2.0.3\angus-mail-2.0.3.jar;C:\Users\dador\.m2\repository\com\sun\xml\messaging\saaj\saaj-impl\3.0.4\saaj-impl-3.0.4.jar;C:\Users\dador\.m2\repository\com\fasterxml\woodstox\woodstox-core\7.0.0\woodstox-core-7.0.0.jar;C:\Users\dador\.m2\repository\org\codehaus\woodstox\stax2-api\4.2.2\stax2-api-4.2.2.jar;C:\Users\dador\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.3\jakarta.activation-api-2.1.3.jar;C:\Users\dador\.m2\repository\jakarta\annotation\jakarta.annotation-api\3.0.0\jakarta.annotation-api-3.0.0.jar;C:\Users\dador\.m2\repository\org\junit\jupiter\junit-jupiter\5.13.4\junit-jupiter-5.13.4.jar;C:\Users\dador\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.13.4\junit-jupiter-api-5.13.4.jar;C:\Users\dador\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\dador\.m2\repository\org\junit\platform\junit-platform-commons\1.13.4\junit-platform-commons-1.13.4.jar;C:\Users\dador\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.13.4\junit-jupiter-engine-5.13.4.jar;C:\Users\dador\.m2\repository\org\junit\platform\junit-platform-suite-engine\1.13.4\junit-platform-suite-engine-1.13.4.jar;C:\Users\dador\.m2\repository\org\junit\platform\junit-platform-engine\1.13.4\junit-platform-engine-1.13.4.jar;C:\Users\dador\.m2\repository\org\junit\platform\junit-platform-suite-api\1.13.4\junit-platform-suite-api-1.13.4.jar;C:\Users\dador\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\dador\.m2\repository\org\junit\platform\junit-platform-suite-commons\1.13.4\junit-platform-suite-commons-1.13.4.jar;C:\Users\dador\.m2\repository\org\junit\platform\junit-platform-launcher\1.13.4\junit-platform-launcher-1.13.4.jar;C:\Users\dador\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.13.4\junit-jupiter-params-5.13.4.jar;C:\Users\dador\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\dador\.m2\repository\org\dbunit\dbunit\2.7.3\dbunit-2.7.3.jar;C:\Users\dador\.m2\repository\org\postgresql\postgresql\42.3.1\postgresql-42.3.1.jar;C:\Users\dador\.m2\repository\org\checkerframework\checker-qual\3.5.0\checker-qual-3.5.0.jar;C:\Users\dador\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.3.0.0\ojdbc8-19.3.0.0.jar;C:\Users\dador\.m2\repository\com\oracle\database\jdbc\ucp\19.3.0.0\ucp-19.3.0.0.jar;C:\Users\dador\.m2\repository\com\oracle\database\security\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar;C:\Users\dador\.m2\repository\com\oracle\database\security\osdt_cert\19.3.0.0\osdt_cert-19.3.0.0.jar;C:\Users\dador\.m2\repository\com\oracle\database\security\osdt_core\19.3.0.0\osdt_core-19.3.0.0.jar;C:\Users\dador\.m2\repository\com\oracle\database\ha\simplefan\19.3.0.0\simplefan-19.3.0.0.jar;C:\Users\dador\.m2\repository\com\oracle\database\ha\ons\19.3.0.0\ons-19.3.0.0.jar;C:\Users\dador\.m2\repository\org\apache\httpcomponents\fluent-hc\4.5.14\fluent-hc-4.5.14.jar;C:\Users\dador\.m2\repository\org\apache\httpcomponents\httpclient\4.5.14\httpclient-4.5.14.jar;C:\Users\dador\.m2\repository\org\apache\httpcomponents\httpcore\4.4.16\httpcore-4.4.16.jar;C:\Users\dador\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\dador\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\dador\.m2\repository\org\slf4j\slf4j-api\2.0.7\slf4j-api-2.0.7.jar;C:\Users\dador\.m2\repository\org\slf4j\slf4j-simple\2.0.7\slf4j-simple-2.0.7.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\dador"/>
     <property name="user.language" value="es"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.version.date" value="2023-01-17"/>
-    <property name="java.home" value="C:\Program Files\Java\jdk-19"/>
+    <property name="java.version.date" value="2025-09-16"/>
+    <property name="java.home" value="C:\Users\dador\.jdks\openjdk-25"/>
     <property name="file.separator" value="\"/>
     <property name="basedir" value="C:\Users\dador\Documents\GitHub\hybrid-server"/>
+    <property name="style.color" value="always"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\dador\AppData\Local\Temp\surefire7519655154944485880\surefirebooter-20250924230845750_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\dador\AppData\Local\Temp\surefire7148053979717070945\surefirebooter-20250929192239303_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="java.runtime.version" value="19.0.2+7-44"/>
+    <property name="java.runtime.version" value="25+36-3489"/>
     <property name="user.name" value="dador"/>
     <property name="stdout.encoding" value="Cp1252"/>
     <property name="path.separator" value=";"/>
     <property name="os.version" value="10.0"/>
-    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
-    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2025.2.1\plugins\maven\lib\maven-event-listener.jar"/>
     <property name="localRepository" value="C:\Users\dador\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\dador\AppData\Local\Temp\"/>
-    <property name="java.version" value="19.0.2"/>
+    <property name="idea.version" value="2025.2.1"/>
+    <property name="java.version" value="25"/>
     <property name="user.dir" value="C:\Users\dador\Documents\GitHub\hybrid-server"/>
     <property name="os.arch" value="amd64"/>
+    <property name="jansi.passthrough" value="true"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="native.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk-19\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Python313\Scripts\;C:\Python313\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\OpenSSL-Win64\bin;C:\Program Files\nodejs\;C:\apache-maven-3.9.11\bin;c:\Users\dador\AppData\Local\Programs\Trae\bin;C:\Users\dador\AppData\Local\Microsoft\WindowsApps;C:\Users\dador\AppData\Local\spicetify;C:\Program Files\JetBrains\PyCharm 2022.3\bin;C:\Users\dador\AppData\Local\GitHubDesktop\bin;C:\Users\dador\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\OpenSSL-Win64\bin;C:\Users\dador\AppData\Roaming\npm;C:\Users\dador\AppData\Local\Programs\Kiro\bin;."/>
+    <property name="java.library.path" value="C:\Users\dador\.jdks\openjdk-25\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Python313\Scripts\;C:\Python313\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\OpenSSL-Win64\bin;C:\Program Files\nodejs\;C:\apache-maven-3.9.11\bin;c:\Users\dador\AppData\Local\Programs\Trae\bin;C:\Users\dador\AppData\Local\Microsoft\WindowsApps;C:\Users\dador\AppData\Local\spicetify;C:\Program Files\JetBrains\PyCharm 2022.3\bin;C:\Users\dador\AppData\Local\GitHubDesktop\bin;C:\Users\dador\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\OpenSSL-Win64\bin;C:\Users\dador\AppData\Roaming\npm;C:\Users\dador\AppData\Local\Programs\Kiro\bin;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="stderr.encoding" value="Cp1252"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="java.vm.version" value="19.0.2+7-44"/>
+    <property name="java.vm.version" value="25+36-3489"/>
+    <property name="stdin.encoding" value="Cp1252"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="java.class.version" value="63.0"/>
+    <property name="maven.repo.local" value="C:\Users\dador\.m2\repository"/>
+    <property name="java.class.version" value="69.0"/>
   </properties>
-  <testcase name="testGetResourceChain" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.011">
-    <failure message="&#10;Expected: is &quot;/&quot;&#10;     but: was null" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
-
-Expected: is "/"
-     but: was null
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
-	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetResourceChain(HTTPRequestPOSTEncodedTest.java:56)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></failure>
-  </testcase>
-  <testcase name="testGetResourceChain" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.001">
-    <failure message="&#10;Expected: is &quot;/&quot;&#10;     but: was null" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
-
-Expected: is "/"
-     but: was null
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
-	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetResourceChain(HTTPRequestPOSTEncodedTest.java:56)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></failure>
-  </testcase>
-  <testcase name="testToString" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.003">
-    <error message="Cannot invoke &quot;es.uvigo.esei.dai.hybridserver.http.HTTPRequestMethod.name()&quot; because the return value of &quot;es.uvigo.esei.dai.hybridserver.http.HTTPRequest.getMethod()&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "es.uvigo.esei.dai.hybridserver.http.HTTPRequestMethod.name()" because the return value of "es.uvigo.esei.dai.hybridserver.http.HTTPRequest.getMethod()" is null
-	at es.uvigo.esei.dai.hybridserver.http.HTTPRequest.toString(HTTPRequest.java:76)
-	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testToString(HTTPRequestPOSTEncodedTest.java:113)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></error>
-  </testcase>
-  <testcase name="testToString" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.001">
-    <error message="Cannot invoke &quot;es.uvigo.esei.dai.hybridserver.http.HTTPRequestMethod.name()&quot; because the return value of &quot;es.uvigo.esei.dai.hybridserver.http.HTTPRequest.getMethod()&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "es.uvigo.esei.dai.hybridserver.http.HTTPRequestMethod.name()" because the return value of "es.uvigo.esei.dai.hybridserver.http.HTTPRequest.getMethod()" is null
-	at es.uvigo.esei.dai.hybridserver.http.HTTPRequest.toString(HTTPRequest.java:76)
-	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testToString(HTTPRequestPOSTEncodedTest.java:113)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></error>
-  </testcase>
-  <testcase name="testGetHttpVersion" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.003">
-    <failure message="&#10;Expected: is &quot;HTTP/1.1&quot;&#10;     but: was null" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
-
-Expected: is "HTTP/1.1"
-     but: was null
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
-	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetHttpVersion(HTTPRequestPOSTEncodedTest.java:71)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></failure>
-  </testcase>
-  <testcase name="testGetHttpVersion" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.001">
-    <failure message="&#10;Expected: is &quot;HTTP/1.1&quot;&#10;     but: was null" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
-
-Expected: is "HTTP/1.1"
-     but: was null
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
-	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetHttpVersion(HTTPRequestPOSTEncodedTest.java:71)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></failure>
-  </testcase>
-  <testcase name="testGetHeaderParameters" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.003">
-    <failure message="&#10;Expected: (map containing [&quot;Host&quot;-&gt;&quot;localhost&quot;] and map containing [&quot;Content-Type&quot;-&gt;&quot;application/x-www-form-urlencoded&quot;] and map containing [&quot;Content-Length&quot;-&gt;&quot;116&quot;])&#10;     but: map containing [&quot;Host&quot;-&gt;&quot;localhost&quot;] was null" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
-
-Expected: (map containing ["Host"->"localhost"] and map containing ["Content-Type"->"application/x-www-form-urlencoded"] and map containing ["Content-Length"->"116"])
-     but: map containing ["Host"->"localhost"] was null
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
-	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetHeaderParameters(HTTPRequestPOSTEncodedTest.java:88)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></failure>
-  </testcase>
-  <testcase name="testGetHeaderParameters" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.001">
-    <failure message="&#10;Expected: (map containing [&quot;Host&quot;-&gt;&quot;localhost&quot;] and map containing [&quot;Content-Type&quot;-&gt;&quot;application/x-www-form-urlencoded&quot;] and map containing [&quot;Content-Length&quot;-&gt;&quot;116&quot;])&#10;     but: map containing [&quot;Host&quot;-&gt;&quot;localhost&quot;] was null" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
-
-Expected: (map containing ["Host"->"localhost"] and map containing ["Content-Type"->"application/x-www-form-urlencoded"] and map containing ["Content-Length"->"116"])
-     but: map containing ["Host"->"localhost"] was null
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
-	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetHeaderParameters(HTTPRequestPOSTEncodedTest.java:88)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></failure>
-  </testcase>
-  <testcase name="testGetResourceName" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.005">
-    <failure message="&#10;Expected: is an empty string&#10;     but: was null" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
-
-Expected: is an empty string
-     but: was null
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
-	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetResourceName(HTTPRequestPOSTEncodedTest.java:66)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></failure>
-  </testcase>
-  <testcase name="testGetResourceName" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.001">
-    <failure message="&#10;Expected: is an empty string&#10;     but: was null" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
-
-Expected: is an empty string
-     but: was null
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
-	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetResourceName(HTTPRequestPOSTEncodedTest.java:66)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></failure>
-  </testcase>
-  <testcase name="testGetResourcePath" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.003">
-    <failure message="&#10;Expected: is an empty array&#10;     but: was null" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
-
-Expected: is an empty array
-     but: was null
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
-	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetResourcePath(HTTPRequestPOSTEncodedTest.java:61)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></failure>
-  </testcase>
-  <testcase name="testGetResourcePath" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.001">
-    <failure message="&#10;Expected: is an empty array&#10;     but: was null" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
-
-Expected: is an empty array
-     but: was null
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
-	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetResourcePath(HTTPRequestPOSTEncodedTest.java:61)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></failure>
-  </testcase>
-  <testcase name="testGetContent" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.001">
-    <failure message="&#10;Expected: is &quot;message=Hello world!!&amp;mensaje=¡¡Hola mundo!!&amp;mensaxe=Ola mundo!!&amp;mensagem=Olá mundo!!&quot;&#10;     but: was null" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
-
-Expected: is "message=Hello world!!&mensaje=¡¡Hola mundo!!&mensaxe=Ola mundo!!&mensagem=Olá mundo!!"
-     but: was null
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
-	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetContent(HTTPRequestPOSTEncodedTest.java:100)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></failure>
-  </testcase>
-  <testcase name="testGetContent" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.001">
-    <failure message="&#10;Expected: is &quot;message=Hello world!!&amp;mensaje=¡¡Hola mundo!!&amp;mensaxe=Ola mundo!!&amp;mensagem=Olá mundo!!&quot;&#10;     but: was null" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
-
-Expected: is "message=Hello world!!&mensaje=¡¡Hola mundo!!&mensaxe=Ola mundo!!&mensagem=Olá mundo!!"
-     but: was null
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
-	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetContent(HTTPRequestPOSTEncodedTest.java:100)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></failure>
-  </testcase>
-  <testcase name="testGetMethod" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.001">
-    <failure message="&#10;Expected: is &lt;POST&gt;&#10;     but: was null" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
-
-Expected: is <POST>
-     but: was null
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
-	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetMethod(HTTPRequestPOSTEncodedTest.java:51)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></failure>
-  </testcase>
-  <testcase name="testGetMethod" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.001">
-    <failure message="&#10;Expected: is &lt;POST&gt;&#10;     but: was null" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
-
-Expected: is <POST>
-     but: was null
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
-	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetMethod(HTTPRequestPOSTEncodedTest.java:51)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></failure>
-  </testcase>
-  <testcase name="testGetContentLength" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.001">
-    <failure message="&#10;Expected: is &lt;116&gt;&#10;     but: was &lt;-1&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
-
-Expected: is <116>
-     but: was <-1>
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
-	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetContentLength(HTTPRequestPOSTEncodedTest.java:108)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></failure>
-  </testcase>
-  <testcase name="testGetContentLength" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.001">
-    <failure message="&#10;Expected: is &lt;116&gt;&#10;     but: was &lt;-1&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
-
-Expected: is <116>
-     but: was <-1>
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
-	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetContentLength(HTTPRequestPOSTEncodedTest.java:108)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></failure>
-  </testcase>
-  <testcase name="testGetResourceParameters" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.001">
-    <failure message="&#10;Expected: (map containing [&quot;message&quot;-&gt;&quot;Hello world!!&quot;] and map containing [&quot;mensaje&quot;-&gt;&quot;¡¡Hola mundo!!&quot;] and map containing [&quot;mensaxe&quot;-&gt;&quot;Ola mundo!!&quot;] and map containing [&quot;mensagem&quot;-&gt;&quot;Olá mundo!!&quot;])&#10;     but: map containing [&quot;message&quot;-&gt;&quot;Hello world!!&quot;] was null" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
-
-Expected: (map containing ["message"->"Hello world!!"] and map containing ["mensaje"->"¡¡Hola mundo!!"] and map containing ["mensaxe"->"Ola mundo!!"] and map containing ["mensagem"->"Olá mundo!!"])
-     but: map containing ["message"->"Hello world!!"] was null
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
-	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetResourceParameters(HTTPRequestPOSTEncodedTest.java:76)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></failure>
-  </testcase>
-  <testcase name="testGetResourceParameters" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.001">
-    <failure message="&#10;Expected: (map containing [&quot;message&quot;-&gt;&quot;Hello world!!&quot;] and map containing [&quot;mensaje&quot;-&gt;&quot;¡¡Hola mundo!!&quot;] and map containing [&quot;mensaxe&quot;-&gt;&quot;Ola mundo!!&quot;] and map containing [&quot;mensagem&quot;-&gt;&quot;Olá mundo!!&quot;])&#10;     but: map containing [&quot;message&quot;-&gt;&quot;Hello world!!&quot;] was null" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: 
-
-Expected: (map containing ["message"->"Hello world!!"] and map containing ["mensaje"->"¡¡Hola mundo!!"] and map containing ["mensaxe"->"Ola mundo!!"] and map containing ["mensagem"->"Olá mundo!!"])
-     but: map containing ["message"->"Hello world!!"] was null
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
-	at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:6)
-	at es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest.testGetResourceParameters(HTTPRequestPOSTEncodedTest.java:76)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-]]></failure>
-  </testcase>
+  <testcase name="testGetResourceChain" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.003"/>
+  <testcase name="testGetResourceChain" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.0"/>
+  <testcase name="testToString" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.001"/>
+  <testcase name="testToString" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.001"/>
+  <testcase name="testGetHttpVersion" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.002"/>
+  <testcase name="testGetHttpVersion" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.0"/>
+  <testcase name="testGetHeaderParameters" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.003"/>
+  <testcase name="testGetHeaderParameters" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.0"/>
+  <testcase name="testGetResourceName" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.003"/>
+  <testcase name="testGetResourceName" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.0"/>
+  <testcase name="testGetResourcePath" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.002"/>
+  <testcase name="testGetResourcePath" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.0"/>
+  <testcase name="testGetContent" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.002"/>
+  <testcase name="testGetContent" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.001"/>
+  <testcase name="testGetMethod" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.002"/>
+  <testcase name="testGetMethod" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.001"/>
+  <testcase name="testGetContentLength" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.002"/>
+  <testcase name="testGetContentLength" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.001"/>
+  <testcase name="testGetResourceParameters" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.001"/>
+  <testcase name="testGetResourceParameters" classname="es.uvigo.esei.dai.hybridserver.step1.HTTPRequestPOSTEncodedTest" time="0.001"/>
 </testsuite>
