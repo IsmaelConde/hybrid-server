@@ -82,7 +82,7 @@ public class HTTPRequest {
 
             String rawBody = new String(buf);
 
-            // Decodificar todos los caracteres de URL, incluso sin Content-Type
+            // Decodificar todos los caracteres de URL
             this.content = URLDecoder.decode(rawBody, StandardCharsets.UTF_8);
 
             // Llenar resourceParameters desde body
@@ -97,18 +97,23 @@ public class HTTPRequest {
     }
 
     public HTTPRequestMethod getMethod() {
+
         return method;
     }
     public String getResourceChain() {
+
         return resourceChain;
     }
     public String[] getResourcePath() {
+
         return resourcePath;
     }
     public String getResourceName() {
+
         return resourceName;
     }
     public Map<String, String> getResourceParameters() {
+
         return resourceParameters;
     }
     public String getHttpVersion() {

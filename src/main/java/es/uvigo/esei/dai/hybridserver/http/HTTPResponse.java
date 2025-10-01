@@ -73,21 +73,21 @@ public class HTTPResponse {
         // Primera línea
         writer.write(this.version + " " + this.status.getCode() + " " + this.status.getStatus() + "\r\n");
 
-// Añadir Content-Length solo si hay contenido
+        // Añadir Content-Length solo si hay contenido
         if (!this.content.isEmpty()) {
             byte[] bodyBytes = this.content.getBytes(StandardCharsets.UTF_8);
             this.parameters.put("Content-Length", String.valueOf(bodyBytes.length));
         }
 
-// Escribir cabeceras
+        // Escribir cabeceras
         for (Map.Entry<String, String> entry : this.parameters.entrySet()) {
             writer.write(entry.getKey() + ": " + entry.getValue() + "\r\n");
         }
 
-// Línea en blanco
+        // Línea en blanco
         writer.write("\r\n");
 
-// Cuerpo
+        // Cuerpo
         if (!this.content.isEmpty()) {
             writer.write(this.content);
         }

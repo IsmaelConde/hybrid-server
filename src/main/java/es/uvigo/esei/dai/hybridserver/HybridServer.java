@@ -69,7 +69,6 @@ public class HybridServer implements AutoCloseable {
                                     if (!version.startsWith("HTTP/")) {
                                         throw new HTTPParseException("Versión de protocolo inválida: " + version);
                                     }
-                                    // ------------------------------------
 
                                     if (path.equals("/")) {     //Página de Bienvenida
                                         String html_bienvenida = """
@@ -245,11 +244,21 @@ public class HybridServer implements AutoCloseable {
         int statusCode;
         String reasonPhrase;
         switch (code) {
-            case 200 -> { statusCode = 200; reasonPhrase = "OK"; }
-            case 400 -> { statusCode = 400; reasonPhrase = "Bad Request"; }
-            case 404 -> { statusCode = 404; reasonPhrase = "Not Found"; }
-            case 500 -> { statusCode = 500; reasonPhrase = "Internal Server Error"; }
-            default -> { statusCode = code; reasonPhrase = "Error"; }
+            case 200 -> {
+                statusCode = 200; reasonPhrase = "OK";
+            }
+            case 400 -> {
+                statusCode = 400; reasonPhrase = "Bad Request";
+            }
+            case 404 -> {
+                statusCode = 404; reasonPhrase = "Not Found";
+            }
+            case 500 -> {
+                statusCode = 500; reasonPhrase = "Internal Server Error";
+            }
+            default -> {
+                statusCode = code; reasonPhrase = "Error";
+            }
         }
 
         String body = (code == 200) ? message : "<html><body><h1>" + statusCode + " " + reasonPhrase + "</h1><p>" + message + "</p>" + insertFooter() + "</body></html>";
