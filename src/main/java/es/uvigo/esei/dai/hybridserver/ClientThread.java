@@ -191,9 +191,9 @@ public class ClientThread implements Runnable {
                         String response;
                         if (uuid != null && pages.containsKey(uuid)) {
                             pages.remove(uuid);
-                            response = "<html><body><h1>Página con UUID " + uuid + " eliminada correctamente.</h1></body></html>";
+                            response = "<html><body><h1>Página con UUID " + uuid + " eliminada correctamente.</h1>" + insertFooter() + "</body></html>";
                         } else {
-                            response = "<html><body><h1>No se encontró ninguna página con UUID " + uuid + ".</h1></body></html>";
+                            response = "<html><body><h1>No se encontró ninguna página con UUID " + uuid + ".</h1>" + insertFooter() + "</body></html>";
                         }
 
                         //  Responder
