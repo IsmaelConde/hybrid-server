@@ -128,8 +128,7 @@ public class ClientThread implements Runnable {
 
                             showHtml(outStream, 200, response);
                         }
-                    }
-                    else if ("GET".equalsIgnoreCase(method)) {
+                    } else if ("GET".equalsIgnoreCase(method)) {
                         String query = "";
                         int qIndex = path.indexOf("?");
                         if (qIndex != -1)
@@ -167,7 +166,39 @@ public class ClientThread implements Runnable {
                             String body = sb.toString();
                             showHtml(outStream, 200, body);
                         }
-                    } else {
+                    } else if("DELETE".equalsIgnoreCase(method)){
+                        // Extraer query string (?uuid=...)
+                        String query = "";
+                        int qIndex = path.indexOf("?");
+                        if (qIndex != -1) {
+                            query = path.substring(qIndex + 1);
+                        }
+
+                        // Parsear parámetros
+                        Map<String, String> params = new HashMap<>();
+                        if (!query.isEmpty()) {
+                            for (String pair : query.split("&")) {
+                                String[] kv = pair.split("=", 2);
+                                if (kv.length == 2) {
+                                    String key = java.net.URLDecoder.decode(kv[0], "UTF-8");
+                                    String value = java.net.URLDecoder.decode(kv[1], "UTF-8");
+                                    params.put(key, value);
+                                }
+                            }
+                        }
+
+                        String uuid = params.get("uuid");
+                        String response;
+                        if (uuid != null && pages.containsKey(uuid)) {
+                            pages.remove(uuid);
+                            response = "<html><body><h1>Página con UUID " + uuid + " eliminada correctamente.</h1></body></html>";
+                        } else {
+                            response = "<html><body><h1>No se encontró ninguna página con UUID " + uuid + ".</h1></body></html>";
+                        }
+
+                        //  Responder
+                        showHtml(outStream, 200, response);
+                    }else {
                         showHtml(outStream, 400,  "Operation not permitted");
                     }
 
