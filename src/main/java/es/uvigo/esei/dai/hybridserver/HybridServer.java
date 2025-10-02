@@ -28,6 +28,7 @@ public class HybridServer implements AutoCloseable {
 
     public HybridServer() {
         // Iniciar Vacío
+        this(new Properties()); // Llama a "HybridServer(Properties properties)", como no tiene propiedades, aplica las por defecto
     }
 
     public HybridServer(Map<String, String> pages) {
@@ -36,8 +37,8 @@ public class HybridServer implements AutoCloseable {
 
     public HybridServer(Properties properties) {
         // TODO Inicializar con los parámetros recibidos
-        SERVICE_PORT = Integer.parseInt(properties.getProperty("port"));
-        numClients = Integer.parseInt(properties.getProperty("numClients"));
+        SERVICE_PORT = Integer.parseInt(properties.getProperty("port", "8888"));
+        numClients = Integer.parseInt(properties.getProperty("numClients", "50")); // En caso de que no se reciba el contenido, pone por defecto a 50
 
         // Creamos conexion con la base de datos (Falta saber como iniciar la jdbc)
         /*

@@ -29,15 +29,31 @@ import java.util.concurrent.ConcurrentHashMap;
 public class Launcher {
   public static void main(String[] args) {
     // TODO Ejecutar el servidor
+      String name_file_config = "config.conf"; // Se usa el por defecto
       Properties prop = new Properties();
 
-      try(FileInputStream file = new FileInputStream("config.conf")){ // Cargamos el fichero de las propiedades
+      if(args.length == 0) { // No se le pasan parametros
+          System.out.println("Usando por defecto: \"" + name_file_config + "\".");
+      } else if(args.length > 1){
+          System.out.println("Formato incorrecto. Se debe ejecutar así:");
+          System.out.println("java es.uvigo.esei.dai.hybridserver.Launch <nombre_configuracion>");
+          System.exit(0); // Finalizamos la ejecución
+      }else{ // Se le pasa un parametro
+          name_file_config = args[0];
+      }
+
+      try(FileInputStream file = new FileInputStream(name_file_config)){ // Cargamos el fichero de las propiedades
             prop.load(file); // Lo cargamos como propiedades
-      } catch (IOException e) {
+      } catch (Exception e) {
           e.printStackTrace();
       }
 
-    final HybridServer server = new HybridServer(prop);
-    server.start();
+      HybridServer server = null;
+      try{
+          server = new HybridServer(prop);
+          server.start();
+      }catch (Exception e){
+          e.printStackTrace();
+      }
   }
 }
