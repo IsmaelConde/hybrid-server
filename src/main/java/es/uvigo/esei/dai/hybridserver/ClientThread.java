@@ -121,7 +121,7 @@ public class ClientThread implements Runnable {
                             pages.put(uuid, htmlContent);
 
                             String response = String.format(
-                                    "<!DOCTYPE html><html><body>Página creada. <a href='/html?uuid=%s'>%s</a>"
+                                    "<!DOCTYPE html><html><head><meta charset=\"UTF-8\"></head><body>Página creada. <a href='/html?uuid=%s'>%s</a>"
                                             + insertFooter() + "</body></html>",
                                     uuid, uuid
                             );
@@ -191,9 +191,9 @@ public class ClientThread implements Runnable {
                         String response;
                         if (uuid != null && pages.containsKey(uuid)) {
                             pages.remove(uuid);
-                            response = "<html><body><h1>Página con UUID " + uuid + " eliminada correctamente.</h1>" + insertFooter() + "</body></html>";
+                            response = "<html><head><meta charset=\"UTF-8\"></head><body><h1>Página con UUID " + uuid + " eliminada correctamente.</h1>" + insertFooter() + "</body></html>";
                         } else {
-                            response = "<html><body><h1>No se encontró ninguna página con UUID " + uuid + ".</h1>" + insertFooter() + "</body></html>";
+                            response = "<html><head><meta charset=\"UTF-8\"></head><body><h1>No se encontró ninguna página con UUID " + uuid + ".</h1>" + insertFooter() + "</body></html>";
                         }
 
                         //  Responder
@@ -230,7 +230,7 @@ public class ClientThread implements Runnable {
             default -> { statusCode = code; reasonPhrase = "Error"; }
         }
 
-        String body = (code == 200) ? message : "<html><body><h1>" + statusCode + " " + reasonPhrase + "</h1><p>" + message + "</p>" + insertFooter() + "</body></html>";
+        String body = (code == 200) ? message : "<html><head><meta charset=\"UTF-8\"></head><body><h1>" + statusCode + " " + reasonPhrase + "</h1><p>" + message + "</p>" + insertFooter() + "</body></html>";
 
         byte[] bodyBytes = body.getBytes(StandardCharsets.UTF_8);
 
