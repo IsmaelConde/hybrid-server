@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest" time="0.056" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest" time="0.057" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="ES"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Users\dador\.jdks\openjdk-25\bin"/>
-    <property name="sun.java.command" value="C:\Users\dador\AppData\Local\Temp\surefire9098941545843176628\surefirebooter-20251006131151999_3.jar C:\Users\dador\AppData\Local\Temp\surefire9098941545843176628 2025-10-06T13-11-51_904-jvmRun1 surefire-20251006131151999_1tmp surefire_0-20251006131151999_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\dador\AppData\Local\Temp\surefire5808346216720235978\surefirebooter-20251006153541760_3.jar C:\Users\dador\AppData\Local\Temp\surefire5808346216720235978 2025-10-06T15-35-41_668-jvmRun1 surefire-20251006153541760_1tmp surefire_0-20251006153541760_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\dador\Documents\GitHub\hybrid-server\target\test-classes;C:\Users\dador\Documents\GitHub\hybrid-server\target\classes;C:\Users\dador\.m2\repository\jakarta\xml\ws\jakarta.xml.ws-api\4.0.0\jakarta.xml.ws-api-4.0.0.jar;C:\Users\dador\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.0\jakarta.xml.bind-api-4.0.0.jar;C:\Users\dador\.m2\repository\jakarta\xml\soap\jakarta.xml.soap-api\3.0.0\jakarta.xml.soap-api-3.0.0.jar;C:\Users\dador\.m2\repository\com\mysql\mysql-connector-j\8.4.0\mysql-connector-j-8.4.0.jar;C:\Users\dador\.m2\repository\com\google\protobuf\protobuf-java\3.25.1\protobuf-java-3.25.1.jar;C:\Users\dador\.m2\repository\com\sun\xml\ws\jaxws-rt\4.0.3\jaxws-rt-4.0.3.jar;C:\Users\dador\.m2\repository\com\sun\xml\bind\jaxb-impl\4.0.5\jaxb-impl-4.0.5.jar;C:\Users\dador\.m2\repository\com\sun\xml\bind\jaxb-core\4.0.5\jaxb-core-4.0.5.jar;C:\Users\dador\.m2\repository\org\glassfish\ha\ha-api\3.1.13\ha-api-3.1.13.jar;C:\Users\dador\.m2\repository\org\glassfish\external\management-api\3.2.3\management-api-3.2.3.jar;C:\Users\dador\.m2\repository\org\glassfish\gmbal\gmbal-api-only\4.0.3\gmbal-api-only-4.0.3.jar;C:\Users\dador\.m2\repository\org\jvnet\staxex\stax-ex\2.1.0\stax-ex-2.1.0.jar;C:\Users\dador\.m2\repository\com\sun\xml\stream\buffer\streambuffer\2.1.0\streambuffer-2.1.0.jar;C:\Users\dador\.m2\repository\org\jvnet\mimepull\mimepull\1.10.0\mimepull-1.10.0.jar;C:\Users\dador\.m2\repository\com\sun\xml\fastinfoset\FastInfoset\2.1.1\FastInfoset-2.1.1.jar;C:\Users\dador\.m2\repository\jakarta\mail\jakarta.mail-api\2.1.3\jakarta.mail-api-2.1.3.jar;C:\Users\dador\.m2\repository\org\eclipse\angus\angus-activation\2.0.2\angus-activation-2.0.2.jar;C:\Users\dador\.m2\repository\org\eclipse\angus\angus-mail\2.0.3\angus-mail-2.0.3.jar;C:\Users\dador\.m2\repository\com\sun\xml\messaging\saaj\saaj-impl\3.0.4\saaj-impl-3.0.4.jar;C:\Users\dador\.m2\repository\com\fasterxml\woodstox\woodstox-core\7.0.0\woodstox-core-7.0.0.jar;C:\Users\dador\.m2\repository\org\codehaus\woodstox\stax2-api\4.2.2\stax2-api-4.2.2.jar;C:\Users\dador\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.3\jakarta.activation-api-2.1.3.jar;C:\Users\dador\.m2\repository\jakarta\annotation\jakarta.annotation-api\3.0.0\jakarta.annotation-api-3.0.0.jar;C:\Users\dador\.m2\repository\org\junit\jupiter\junit-jupiter\5.13.4\junit-jupiter-5.13.4.jar;C:\Users\dador\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.13.4\junit-jupiter-api-5.13.4.jar;C:\Users\dador\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\dador\.m2\repository\org\junit\platform\junit-platform-commons\1.13.4\junit-platform-commons-1.13.4.jar;C:\Users\dador\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.13.4\junit-jupiter-engine-5.13.4.jar;C:\Users\dador\.m2\repository\org\junit\platform\junit-platform-suite-engine\1.13.4\junit-platform-suite-engine-1.13.4.jar;C:\Users\dador\.m2\repository\org\junit\platform\junit-platform-engine\1.13.4\junit-platform-engine-1.13.4.jar;C:\Users\dador\.m2\repository\org\junit\platform\junit-platform-suite-api\1.13.4\junit-platform-suite-api-1.13.4.jar;C:\Users\dador\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\dador\.m2\repository\org\junit\platform\junit-platform-suite-commons\1.13.4\junit-platform-suite-commons-1.13.4.jar;C:\Users\dador\.m2\repository\org\junit\platform\junit-platform-launcher\1.13.4\junit-platform-launcher-1.13.4.jar;C:\Users\dador\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.13.4\junit-jupiter-params-5.13.4.jar;C:\Users\dador\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\dador\.m2\repository\org\dbunit\dbunit\2.7.3\dbunit-2.7.3.jar;C:\Users\dador\.m2\repository\org\postgresql\postgresql\42.3.1\postgresql-42.3.1.jar;C:\Users\dador\.m2\repository\org\checkerframework\checker-qual\3.5.0\checker-qual-3.5.0.jar;C:\Users\dador\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.3.0.0\ojdbc8-19.3.0.0.jar;C:\Users\dador\.m2\repository\com\oracle\database\jdbc\ucp\19.3.0.0\ucp-19.3.0.0.jar;C:\Users\dador\.m2\repository\com\oracle\database\security\oraclepki\19.3.0.0\oraclepki-19.3.0.0.jar;C:\Users\dador\.m2\repository\com\oracle\database\security\osdt_cert\19.3.0.0\osdt_cert-19.3.0.0.jar;C:\Users\dador\.m2\repository\com\oracle\database\security\osdt_core\19.3.0.0\osdt_core-19.3.0.0.jar;C:\Users\dador\.m2\repository\com\oracle\database\ha\simplefan\19.3.0.0\simplefan-19.3.0.0.jar;C:\Users\dador\.m2\repository\com\oracle\database\ha\ons\19.3.0.0\ons-19.3.0.0.jar;C:\Users\dador\.m2\repository\org\apache\httpcomponents\fluent-hc\4.5.14\fluent-hc-4.5.14.jar;C:\Users\dador\.m2\repository\org\apache\httpcomponents\httpclient\4.5.14\httpclient-4.5.14.jar;C:\Users\dador\.m2\repository\org\apache\httpcomponents\httpcore\4.4.16\httpcore-4.4.16.jar;C:\Users\dador\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\dador\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\dador\.m2\repository\org\slf4j\slf4j-api\2.0.7\slf4j-api-2.0.7.jar;C:\Users\dador\.m2\repository\org\slf4j\slf4j-simple\2.0.7\slf4j-simple-2.0.7.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\dador\AppData\Local\Temp\surefire9098941545843176628\surefirebooter-20251006131151999_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\dador\AppData\Local\Temp\surefire5808346216720235978\surefirebooter-20251006153541760_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="25+36-3489"/>
@@ -54,7 +54,7 @@
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="native.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Users\dador\.jdks\openjdk-25\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Python313\Scripts\;C:\Python313\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\OpenSSL-Win64\bin;C:\Program Files\nodejs\;C:\apache-maven-3.9.11\bin;c:\Users\dador\AppData\Local\Programs\Trae\bin;C:\Users\dador\AppData\Local\Microsoft\WindowsApps;C:\Users\dador\AppData\Local\spicetify;C:\Program Files\JetBrains\PyCharm 2022.3\bin;C:\Users\dador\AppData\Local\GitHubDesktop\bin;C:\Users\dador\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\OpenSSL-Win64\bin;C:\Users\dador\AppData\Roaming\npm;C:\Users\dador\AppData\Local\Programs\Kiro\bin;."/>
+    <property name="java.library.path" value="C:\Users\dador\.jdks\openjdk-25\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Python313\Scripts\;C:\Python313\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\OpenSSL-Win64\bin;C:\Program Files\nodejs\;C:\apache-maven-3.9.11\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;c:\Users\dador\AppData\Local\Programs\Trae\bin;C:\Users\dador\AppData\Local\Microsoft\WindowsApps;C:\Users\dador\AppData\Local\spicetify;C:\Program Files\JetBrains\PyCharm 2022.3\bin;C:\Users\dador\AppData\Local\GitHubDesktop\bin;C:\Users\dador\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\OpenSSL-Win64\bin;C:\Users\dador\AppData\Roaming\npm;C:\Users\dador\AppData\Local\Programs\Kiro\bin;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="stderr.encoding" value="Cp1252"/>
     <property name="java.vendor" value="Oracle Corporation"/>
@@ -64,7 +64,7 @@
     <property name="maven.repo.local" value="C:\Users\dador\.m2\repository"/>
     <property name="java.class.version" value="69.0"/>
   </properties>
-  <testcase name="testPostInvalidContent" classname="es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest" time="0.007">
+  <testcase name="testPostInvalidContent" classname="es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest" time="0.008">
     <system-err><![CDATA[es.uvigo.esei.dai.hybridserver.http.HTTPParseException: Petición vacía
 	at es.uvigo.esei.dai.hybridserver.ClientThread.run(ClientThread.java:33)
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
@@ -74,7 +74,7 @@
 	at java.base/java.lang.Thread.run(Thread.java:1474)
 ]]></system-err>
   </testcase>
-  <testcase name="testPost" classname="es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest" time="0.007">
+  <testcase name="testPost" classname="es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest" time="0.009">
     <system-err><![CDATA[java.net.SocketException: Se ha anulado una conexión establecida por el software en su equipo host.
 	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
 	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:57)
@@ -86,23 +86,23 @@
 	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1076)
 	at java.base/java.io.OutputStream.write(OutputStream.java:124)
 	at es.uvigo.esei.dai.hybridserver.ClientThread.showHtml(ClientThread.java:241)
-	at es.uvigo.esei.dai.hybridserver.ClientThread.run(ClientThread.java:211)
+	at es.uvigo.esei.dai.hybridserver.ClientThread.run(ClientThread.java:96)
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
 	at java.base/java.lang.Thread.run(Thread.java:1474)
 es.uvigo.esei.dai.hybridserver.http.HTTPParseException: Petición vacía
-]]></system-err>
-  </testcase>
-  <testcase name="testGetInvalidResource" classname="es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest" time="0.004">
-    <system-err><![CDATA[	at es.uvigo.esei.dai.hybridserver.ClientThread.run(ClientThread.java:33)
+	at es.uvigo.esei.dai.hybridserver.ClientThread.run(ClientThread.java:33)
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
 	at java.base/java.lang.Thread.run(Thread.java:1474)
-java.net.SocketException: Se ha anulado una conexión establecida por el software en su equipo host.
+]]></system-err>
+  </testcase>
+  <testcase name="testGetInvalidResource" classname="es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest" time="0.004">
+    <system-err><![CDATA[java.net.SocketException: Se ha anulado una conexión establecida por el software en su equipo host.
 	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
 	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:57)
 	at java.base/sun.nio.ch.NioSocketImpl.tryWrite(NioSocketImpl.java:402)
@@ -113,7 +113,7 @@ java.net.SocketException: Se ha anulado una conexión establecida por el softwar
 	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1076)
 	at java.base/java.io.OutputStream.write(OutputStream.java:124)
 	at es.uvigo.esei.dai.hybridserver.ClientThread.showHtml(ClientThread.java:241)
-	at es.uvigo.esei.dai.hybridserver.ClientThread.run(ClientThread.java:211)
+	at es.uvigo.esei.dai.hybridserver.ClientThread.run(ClientThread.java:96)
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
@@ -140,72 +140,18 @@ es.uvigo.esei.dai.hybridserver.http.HTTPParseException: Petición vacía
 	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1076)
 	at java.base/java.io.OutputStream.write(OutputStream.java:124)
 	at es.uvigo.esei.dai.hybridserver.ClientThread.showHtml(ClientThread.java:241)
-	at es.uvigo.esei.dai.hybridserver.ClientThread.run(ClientThread.java:211)
+	at es.uvigo.esei.dai.hybridserver.ClientThread.run(ClientThread.java:96)
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
 	at java.base/java.lang.Thread.run(Thread.java:1474)
 es.uvigo.esei.dai.hybridserver.http.HTTPParseException: Petición vacía
-	at es.uvigo.esei.dai.hybridserver.ClientThread.run(ClientThread.java:33)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
-	at java.base/java.lang.Thread.run(Thread.java:1474)
 ]]></system-err>
   </testcase>
-  <testcase name="testGetHtmlList" classname="es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest" time="0.003">
-    <system-err><![CDATA[java.net.SocketException: Se ha anulado una conexión establecida por el software en su equipo host.
-	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
-	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:57)
-	at java.base/sun.nio.ch.NioSocketImpl.tryWrite(NioSocketImpl.java:402)
-	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:418)
-	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:448)
-	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:821)
-	at java.base/java.net.Socket$SocketOutputStream.implWrite(Socket.java:1086)
-	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1076)
-	at java.base/java.io.OutputStream.write(OutputStream.java:124)
-	at es.uvigo.esei.dai.hybridserver.ClientThread.showHtml(ClientThread.java:241)
-	at es.uvigo.esei.dai.hybridserver.ClientThread.run(ClientThread.java:211)
+  <testcase name="testGetHtmlList" classname="es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest" time="0.004">
+    <system-err><![CDATA[	at es.uvigo.esei.dai.hybridserver.ClientThread.run(ClientThread.java:33)
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
-	at java.base/java.lang.Thread.run(Thread.java:1474)
-es.uvigo.esei.dai.hybridserver.http.HTTPParseException: Petición vacía
-	at es.uvigo.esei.dai.hybridserver.ClientThread.run(ClientThread.java:33)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
-	at java.base/java.lang.Thread.run(Thread.java:1474)
-]]></system-err>
-  </testcase>
-  <testcase name="testGetHtmlPage" classname="es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest" time="0.016">
-    <system-err><![CDATA[java.net.SocketException: Se ha anulado una conexión establecida por el software en su equipo host.
-	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
-	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:57)
-	at java.base/sun.nio.ch.NioSocketImpl.tryWrite(NioSocketImpl.java:402)
-	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:418)
-	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:448)
-	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:821)
-	at java.base/java.net.Socket$SocketOutputStream.implWrite(Socket.java:1086)
-	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1076)
-	at java.base/java.io.OutputStream.write(OutputStream.java:124)
-	at es.uvigo.esei.dai.hybridserver.ClientThread.showHtml(ClientThread.java:241)
-	at es.uvigo.esei.dai.hybridserver.ClientThread.run(ClientThread.java:211)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
-	at java.base/java.lang.Thread.run(Thread.java:1474)
-es.uvigo.esei.dai.hybridserver.http.HTTPParseException: Petición vacía
-	at es.uvigo.esei.dai.hybridserver.ClientThread.run(ClientThread.java:33)
-]]></system-err>
-  </testcase>
-  <testcase name="testDelete" classname="es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest" time="0.007">
-    <system-err><![CDATA[	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
@@ -221,7 +167,7 @@ java.net.SocketException: Se ha anulado una conexión establecida por el softwar
 	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1076)
 	at java.base/java.io.OutputStream.write(OutputStream.java:124)
 	at es.uvigo.esei.dai.hybridserver.ClientThread.showHtml(ClientThread.java:241)
-	at es.uvigo.esei.dai.hybridserver.ClientThread.run(ClientThread.java:211)
+	at es.uvigo.esei.dai.hybridserver.ClientThread.run(ClientThread.java:96)
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
@@ -236,7 +182,7 @@ es.uvigo.esei.dai.hybridserver.http.HTTPParseException: Petición vacía
 	at java.base/java.lang.Thread.run(Thread.java:1474)
 ]]></system-err>
   </testcase>
-  <testcase name="testDeleteNonexistentPage" classname="es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest" time="0.005">
+  <testcase name="testGetHtmlPage" classname="es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest" time="0.017">
     <system-err><![CDATA[java.net.SocketException: Se ha anulado una conexión establecida por el software en su equipo host.
 	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
 	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:57)
@@ -248,7 +194,61 @@ es.uvigo.esei.dai.hybridserver.http.HTTPParseException: Petición vacía
 	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1076)
 	at java.base/java.io.OutputStream.write(OutputStream.java:124)
 	at es.uvigo.esei.dai.hybridserver.ClientThread.showHtml(ClientThread.java:241)
-	at es.uvigo.esei.dai.hybridserver.ClientThread.run(ClientThread.java:211)
+	at es.uvigo.esei.dai.hybridserver.ClientThread.run(ClientThread.java:96)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+es.uvigo.esei.dai.hybridserver.http.HTTPParseException: Petición vacía
+	at es.uvigo.esei.dai.hybridserver.ClientThread.run(ClientThread.java:33)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+]]></system-err>
+  </testcase>
+  <testcase name="testDelete" classname="es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest" time="0.005">
+    <system-err><![CDATA[java.net.SocketException: Se ha anulado una conexión establecida por el software en su equipo host.
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:57)
+	at java.base/sun.nio.ch.NioSocketImpl.tryWrite(NioSocketImpl.java:402)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:418)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:448)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:821)
+	at java.base/java.net.Socket$SocketOutputStream.implWrite(Socket.java:1086)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1076)
+	at java.base/java.io.OutputStream.write(OutputStream.java:124)
+	at es.uvigo.esei.dai.hybridserver.ClientThread.showHtml(ClientThread.java:241)
+	at es.uvigo.esei.dai.hybridserver.ClientThread.run(ClientThread.java:96)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+es.uvigo.esei.dai.hybridserver.http.HTTPParseException: Petición vacía
+	at es.uvigo.esei.dai.hybridserver.ClientThread.run(ClientThread.java:33)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+]]></system-err>
+  </testcase>
+  <testcase name="testDeleteNonexistentPage" classname="es.uvigo.esei.dai.hybridserver.step2.ClientRequetsTest" time="0.004">
+    <system-err><![CDATA[java.net.SocketException: Se ha anulado una conexión establecida por el software en su equipo host.
+	at java.base/sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:57)
+	at java.base/sun.nio.ch.NioSocketImpl.tryWrite(NioSocketImpl.java:402)
+	at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:418)
+	at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:448)
+	at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:821)
+	at java.base/java.net.Socket$SocketOutputStream.implWrite(Socket.java:1086)
+	at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1076)
+	at java.base/java.io.OutputStream.write(OutputStream.java:124)
+	at es.uvigo.esei.dai.hybridserver.ClientThread.showHtml(ClientThread.java:241)
+	at es.uvigo.esei.dai.hybridserver.ClientThread.run(ClientThread.java:96)
 	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)

@@ -1,1 +1,5 @@
 es\uvigo\esei\dai\hybridserver\ClientThread.class
+es\uvigo\esei\dai\hybridserver\dao\HTMLDao.class
+es\uvigo\esei\dai\hybridserver\HTMLController.class
+es\uvigo\esei\dai\hybridserver\dao\HTMLDaoDB.class
+es\uvigo\esei\dai\hybridserver\dao\HTMLMapDao.class

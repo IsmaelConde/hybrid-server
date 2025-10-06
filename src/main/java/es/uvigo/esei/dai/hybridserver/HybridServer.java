@@ -1,16 +1,15 @@
 package es.uvigo.esei.dai.hybridserver;
 
-import es.uvigo.esei.dai.hybridserver.http.HTTPHeaders;
-import es.uvigo.esei.dai.hybridserver.http.HTTPParseException;
+import es.uvigo.esei.dai.hybridserver.dao.HTMLDao;
+import es.uvigo.esei.dai.hybridserver.dao.HTMLDaoDB;
+import es.uvigo.esei.dai.hybridserver.dao.HTMLMapDao;
 
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
@@ -28,22 +27,49 @@ public class HybridServer implements AutoCloseable {
     protected static Map<String,String> pages = new ConcurrentHashMap<>();
     private Connection connection;
 
+    private final HTMLController htmlController;
     public HybridServer() {
         // Iniciar Vacío
         this(new Properties()); // Llama a "HybridServer(Properties properties)", como no tiene propiedades, aplica las por defecto
     }
 
     public HybridServer(Map<String, String> pages) {
-        this(new Properties());
-        this.pages.putAll(pages);
+        HTMLMapDao dao = new HTMLMapDao();
+        for (Map.Entry<String, String> entry : pages.entrySet()) {
+            try {
+                dao.savePage(entry.getKey(), entry.getValue());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        this.htmlController = new HTMLController(dao);
+
+        executor = Executors.newFixedThreadPool(numClients);
+
     }
 
-    public HybridServer(Properties properties) {
+    public HybridServer(Properties properties)  {
         // TODO Inicializar con los parámetros recibidos
         SERVICE_PORT = Integer.parseInt(properties.getProperty("port", "8888"));
         numClients = Integer.parseInt(properties.getProperty("numClients", "50")); // En caso de que no se reciba el contenido, pone por defecto a 50
 
         executor = Executors.newFixedThreadPool(numClients);
+
+        HTMLDao dao;
+        if(properties.getProperty("db.url") != null){
+            try {
+                dao = new HTMLDaoDB(properties.getProperty("db.url"),
+                        properties.getProperty("db.user"),
+                        properties.getProperty("db.password"));
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }else{
+            dao = new HTMLMapDao();
+        }
+        htmlController = new HTMLController(dao);
+
+
 
         // Creamos conexion con la base de datos (Falta saber como iniciar la jdbc)
         /*
@@ -56,11 +82,16 @@ public class HybridServer implements AutoCloseable {
         */
     }
 
+    public HTMLController getHtmlController() {
+        return htmlController;
+    }
+
     public int getPort() {
         return SERVICE_PORT;
     }
 
     public void start() {
+        this.stop = false;
         this.serverThread = new Thread() { // Dejamos que un hilo ejecute el servidor, ya que podemos tener varios servidores en el mismo JVM (hacer una especie de "servidores virtuales")
             @Override
             public void run() {
@@ -69,7 +100,7 @@ public class HybridServer implements AutoCloseable {
                         Socket socket = serverSocket.accept();
 
                         // Pool de hilos (Para cuando los clientes se conectan al servidor)
-                        executor.submit(new ClientThread(socket));
+                        executor.submit(new ClientThread(socket, htmlController,getPort()));
                         // ----------------
                         if (stop)
                             break;
@@ -80,7 +111,7 @@ public class HybridServer implements AutoCloseable {
             }
         };
 
-        this.stop = false;
+
         this.serverThread.start();
     }
 
