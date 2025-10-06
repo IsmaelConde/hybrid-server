@@ -14,12 +14,12 @@ public class HTMLDaoDB implements HTMLDao {
         this.dbUser = dbUser;
         this.dbPassword = dbPassword;
 
-        // Crear tabla si no existe
+        // Crear tabla si no existe, ajustándose a la especificación exacta
         try (Connection conn = getConnection();
              Statement stmt = conn.createStatement()) {
             stmt.executeUpdate("""
-                CREATE TABLE IF NOT EXISTS html_pages (
-                    uuid VARCHAR(36) PRIMARY KEY,
+                CREATE TABLE IF NOT EXISTS HTML (
+                    uuid CHAR(36) PRIMARY KEY, 
                     content TEXT NOT NULL
                 )
                 """);
@@ -34,7 +34,7 @@ public class HTMLDaoDB implements HTMLDao {
     public void savePage(String uuid, String htmlContent) throws Exception {
         try (Connection conn = getConnection();
              PreparedStatement stmt = conn.prepareStatement(
-                     "REPLACE INTO html_pages(uuid, content) VALUES (?, ?)")) {
+                     "REPLACE INTO HTML(uuid, content) VALUES (?, ?)")) {
             stmt.setString(1, uuid);
             stmt.setString(2, htmlContent);
             stmt.executeUpdate();
@@ -45,7 +45,7 @@ public class HTMLDaoDB implements HTMLDao {
     public String getPage(String uuid) throws Exception {
         try (Connection conn = getConnection();
              PreparedStatement stmt = conn.prepareStatement(
-                     "SELECT content FROM html_pages WHERE uuid = ?")) {
+                     "SELECT content FROM HTML WHERE uuid = ?")) {
             stmt.setString(1, uuid);
             try (ResultSet rs = stmt.executeQuery()) {
                 if (rs.next()) {
@@ -60,7 +60,7 @@ public class HTMLDaoDB implements HTMLDao {
     public boolean deletePage(String uuid) throws Exception {
         try (Connection conn = getConnection();
              PreparedStatement stmt = conn.prepareStatement(
-                     "DELETE FROM html_pages WHERE uuid = ?")) {
+                     "DELETE FROM HTML WHERE uuid = ?")) {
             stmt.setString(1, uuid);
             return stmt.executeUpdate() > 0;
         }
@@ -70,7 +70,7 @@ public class HTMLDaoDB implements HTMLDao {
     public Set<String> listPages() throws Exception {
         Set<String> uuids = new HashSet<>();
         try (Connection conn = getConnection();
-             PreparedStatement stmt = conn.prepareStatement("SELECT uuid FROM html_pages");
+             PreparedStatement stmt = conn.prepareStatement("SELECT uuid FROM HTML");
              ResultSet rs = stmt.executeQuery()) {
             while (rs.next()) {
                 uuids.add(rs.getString("uuid"));

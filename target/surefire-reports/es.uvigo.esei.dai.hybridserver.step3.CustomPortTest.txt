@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: es.uvigo.esei.dai.hybridserver.step3.CustomPortTest
 -------------------------------------------------------------------------------
-Tests run: 11, Failures: 0, Errors: 10, Skipped: 0, Time elapsed: 0.456 s <<< FAILURE! -- in es.uvigo.esei.dai.hybridserver.step3.CustomPortTest
-es.uvigo.esei.dai.hybridserver.step3.CustomPortTest.testMultipleWelcome(int)[1] -- Time elapsed: 0.339 s <<< ERROR!
+Tests run: 11, Failures: 0, Errors: 10, Skipped: 0, Time elapsed: 0.449 s <<< FAILURE! -- in es.uvigo.esei.dai.hybridserver.step3.CustomPortTest
+es.uvigo.esei.dai.hybridserver.step3.CustomPortTest.testMultipleWelcome(int)[1] -- Time elapsed: 0.333 s <<< ERROR!
 java.lang.RuntimeException: java.sql.SQLException: Access denied for user 'dai'@'localhost' (using password: YES)
 	at es.uvigo.esei.dai.hybridserver.HybridServer.<init>(HybridServer.java:65)
 	at es.uvigo.esei.dai.hybridserver.step3.CustomPortTest.startServer(CustomPortTest.java:51)
@@ -164,7 +164,7 @@ Caused by: java.sql.SQLException: Access denied for user 'dai'@'localhost' (usin
 	at es.uvigo.esei.dai.hybridserver.HybridServer.<init>(HybridServer.java:63)
 	... 37 more
 
-es.uvigo.esei.dai.hybridserver.step3.CustomPortTest.testMultipleWelcome(int)[4] -- Time elapsed: 0.012 s <<< ERROR!
+es.uvigo.esei.dai.hybridserver.step3.CustomPortTest.testMultipleWelcome(int)[4] -- Time elapsed: 0.010 s <<< ERROR!
 java.lang.RuntimeException: java.sql.SQLException: Access denied for user 'dai'@'localhost' (using password: YES)
 	at es.uvigo.esei.dai.hybridserver.HybridServer.<init>(HybridServer.java:65)
 	at es.uvigo.esei.dai.hybridserver.step3.CustomPortTest.startServer(CustomPortTest.java:51)
@@ -272,7 +272,7 @@ Caused by: java.sql.SQLException: Access denied for user 'dai'@'localhost' (usin
 	at es.uvigo.esei.dai.hybridserver.HybridServer.<init>(HybridServer.java:63)
 	... 37 more
 
-es.uvigo.esei.dai.hybridserver.step3.CustomPortTest.testMultipleWelcome(int)[6] -- Time elapsed: 0.011 s <<< ERROR!
+es.uvigo.esei.dai.hybridserver.step3.CustomPortTest.testMultipleWelcome(int)[6] -- Time elapsed: 0.010 s <<< ERROR!
 java.lang.RuntimeException: java.sql.SQLException: Access denied for user 'dai'@'localhost' (using password: YES)
 	at es.uvigo.esei.dai.hybridserver.HybridServer.<init>(HybridServer.java:65)
 	at es.uvigo.esei.dai.hybridserver.step3.CustomPortTest.startServer(CustomPortTest.java:51)
@@ -380,7 +380,7 @@ Caused by: java.sql.SQLException: Access denied for user 'dai'@'localhost' (usin
 	at es.uvigo.esei.dai.hybridserver.HybridServer.<init>(HybridServer.java:63)
 	... 37 more
 
-es.uvigo.esei.dai.hybridserver.step3.CustomPortTest.testMultipleWelcome(int)[8] -- Time elapsed: 0.008 s <<< ERROR!
+es.uvigo.esei.dai.hybridserver.step3.CustomPortTest.testMultipleWelcome(int)[8] -- Time elapsed: 0.009 s <<< ERROR!
 java.lang.RuntimeException: java.sql.SQLException: Access denied for user 'dai'@'localhost' (using password: YES)
 	at es.uvigo.esei.dai.hybridserver.HybridServer.<init>(HybridServer.java:65)
 	at es.uvigo.esei.dai.hybridserver.step3.CustomPortTest.startServer(CustomPortTest.java:51)
@@ -434,7 +434,7 @@ Caused by: java.sql.SQLException: Access denied for user 'dai'@'localhost' (usin
 	at es.uvigo.esei.dai.hybridserver.HybridServer.<init>(HybridServer.java:63)
 	... 37 more
 
-es.uvigo.esei.dai.hybridserver.step3.CustomPortTest.testMultipleWelcome(int)[9] -- Time elapsed: 0.009 s <<< ERROR!
+es.uvigo.esei.dai.hybridserver.step3.CustomPortTest.testMultipleWelcome(int)[9] -- Time elapsed: 0.008 s <<< ERROR!
 java.lang.RuntimeException: java.sql.SQLException: Access denied for user 'dai'@'localhost' (using password: YES)
 	at es.uvigo.esei.dai.hybridserver.HybridServer.<init>(HybridServer.java:65)
 	at es.uvigo.esei.dai.hybridserver.step3.CustomPortTest.startServer(CustomPortTest.java:51)
@@ -488,7 +488,7 @@ Caused by: java.sql.SQLException: Access denied for user 'dai'@'localhost' (usin
 	at es.uvigo.esei.dai.hybridserver.HybridServer.<init>(HybridServer.java:63)
 	... 37 more
 
-es.uvigo.esei.dai.hybridserver.step3.CustomPortTest.testMultipleWelcome(int)[10] -- Time elapsed: 0.009 s <<< ERROR!
+es.uvigo.esei.dai.hybridserver.step3.CustomPortTest.testMultipleWelcome(int)[10] -- Time elapsed: 0.008 s <<< ERROR!
 java.lang.RuntimeException: java.sql.SQLException: Access denied for user 'dai'@'localhost' (using password: YES)
 	at es.uvigo.esei.dai.hybridserver.HybridServer.<init>(HybridServer.java:65)
 	at es.uvigo.esei.dai.hybridserver.step3.CustomPortTest.startServer(CustomPortTest.java:51)

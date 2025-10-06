@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: es.uvigo.esei.dai.hybridserver.step1.HTTPRequestResponseSuite
 -------------------------------------------------------------------------------
-Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.076 s -- in es.uvigo.esei.dai.hybridserver.step1.HTTPRequestResponseSuite
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.079 s -- in es.uvigo.esei.dai.hybridserver.step1.HTTPRequestResponseSuite
