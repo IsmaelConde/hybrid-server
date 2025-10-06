@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 0, Errors: 7, Skipped: 0, Time elapsed: 0.223 s <<< FAILURE! -- in es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest
-es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.testPostInvalidContent -- Time elapsed: 0.203 s <<< ERROR!
+Tests run: 7, Failures: 0, Errors: 7, Skipped: 0, Time elapsed: 0.217 s <<< FAILURE! -- in es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest
+es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.testPostInvalidContent -- Time elapsed: 0.193 s <<< ERROR!
 com.mysql.cj.jdbc.exceptions.CommunicationsException: 
 Communications link failure
 
@@ -152,7 +152,7 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
 	... 14 more
 
-es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.testGetInvalidHtmlPage -- Time elapsed: 0.003 s <<< ERROR!
+es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.testGetInvalidHtmlPage -- Time elapsed: 0.002 s <<< ERROR!
 com.mysql.cj.jdbc.exceptions.CommunicationsException: 
 Communications link failure
 
@@ -252,7 +252,7 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
 	... 14 more
 
-es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.testDelete -- Time elapsed: 0.003 s <<< ERROR!
+es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.testDelete -- Time elapsed: 0.002 s <<< ERROR!
 com.mysql.cj.jdbc.exceptions.CommunicationsException: 
 Communications link failure
 
@@ -302,7 +302,7 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
 	... 14 more
 
-es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.testDeleteNonexistentPage -- Time elapsed: 0.003 s <<< ERROR!
+es.uvigo.esei.dai.hybridserver.step3.ClientRequestsWithDatabaseTest.testDeleteNonexistentPage -- Time elapsed: 0.002 s <<< ERROR!
 com.mysql.cj.jdbc.exceptions.CommunicationsException: 
 Communications link failure
 

@@ -121,8 +121,7 @@ public class ClientThread implements Runnable {
                             pages.put(uuid, htmlContent);
 
                             String response = String.format(
-                                    "<!DOCTYPE html><html><head><meta charset=\"UTF-8\"></head><body>Página creada. <a href='/html?uuid=%s'>%s</a>"
-                                            + insertFooter() + "</body></html>",
+                                    "<a href=\"html?uuid=%s\">%s</a>",
                                     uuid, uuid
                             );
 
@@ -192,12 +191,13 @@ public class ClientThread implements Runnable {
                         if (uuid != null && pages.containsKey(uuid)) {
                             pages.remove(uuid);
                             response = "<html><head><meta charset=\"UTF-8\"></head><body><h1>Página con UUID " + uuid + " eliminada correctamente.</h1>" + insertFooter() + "</body></html>";
+                            showHtml(outStream, 200, response);
                         } else {
                             response = "<html><head><meta charset=\"UTF-8\"></head><body><h1>No se encontró ninguna página con UUID " + uuid + ".</h1>" + insertFooter() + "</body></html>";
+                            showHtml(outStream, 404, response);
                         }
 
-                        //  Responder
-                        showHtml(outStream, 200, response);
+
                     }else {
                         showHtml(outStream, 400,  "Operation not permitted");
                     }
@@ -238,7 +238,6 @@ public class ClientThread implements Runnable {
         outStream.write(("HTTP/1.1 " + statusCode + " " + reasonPhrase + "\r\n").getBytes(StandardCharsets.UTF_8));
 
         // Cabeceras
-        outStream.write(("Content-Length: " + bodyBytes.length + "\r\n").getBytes(StandardCharsets.UTF_8));
         outStream.write("Content-Type: text/html\r\n".getBytes(StandardCharsets.UTF_8));
         outStream.write("\r\n".getBytes(StandardCharsets.UTF_8));
 

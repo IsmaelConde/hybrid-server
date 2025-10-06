@@ -34,6 +34,7 @@ public class HybridServer implements AutoCloseable {
     }
 
     public HybridServer(Map<String, String> pages) {
+        this(new Properties());
         this.pages.putAll(pages);
     }
 
