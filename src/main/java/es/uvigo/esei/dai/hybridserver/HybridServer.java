@@ -17,7 +17,8 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class HybridServer implements AutoCloseable {
-    protected static int SERVICE_PORT;
+
+    private final int servicePort;;
     private Thread serverThread;
     private boolean stop;
     private static int numClients;
@@ -29,28 +30,25 @@ public class HybridServer implements AutoCloseable {
 
     private final HTMLController htmlController;
     public HybridServer() {
-        // Iniciar Vacío
-        this(new Properties()); // Llama a "HybridServer(Properties properties)", como no tiene propiedades, aplica las por defecto
+        this(new Properties());
     }
 
     public HybridServer(Map<String, String> pages) {
-        HTMLMapDao dao = new HTMLMapDao();
+
+        this(new Properties());
+
         for (Map.Entry<String, String> entry : pages.entrySet()) {
             try {
-                dao.savePage(entry.getKey(), entry.getValue());
+                this.htmlController.createPage(entry.getKey(), entry.getValue());
             } catch (Exception e) {
-                e.printStackTrace();
+                throw new RuntimeException("Error al inicializar el servidor con las páginas proporcionadas", e);
             }
         }
-        this.htmlController = new HTMLController(dao);
-
-        executor = Executors.newFixedThreadPool(numClients);
-
     }
 
     public HybridServer(Properties properties)  {
         // TODO Inicializar con los parámetros recibidos
-        SERVICE_PORT = Integer.parseInt(properties.getProperty("port", "8888"));
+        this.servicePort = Integer.parseInt(properties.getProperty("port", "8888"));
         numClients = Integer.parseInt(properties.getProperty("numClients", "50")); // En caso de que no se reciba el contenido, pone por defecto a 50
 
         executor = Executors.newFixedThreadPool(numClients);
@@ -87,7 +85,7 @@ public class HybridServer implements AutoCloseable {
     }
 
     public int getPort() {
-        return SERVICE_PORT;
+        return this.servicePort; // Devuelve la variable de instancia
     }
 
     public void start() {
@@ -95,7 +93,7 @@ public class HybridServer implements AutoCloseable {
         this.serverThread = new Thread() { // Dejamos que un hilo ejecute el servidor, ya que podemos tener varios servidores en el mismo JVM (hacer una especie de "servidores virtuales")
             @Override
             public void run() {
-                try (final ServerSocket serverSocket = new ServerSocket(SERVICE_PORT)) {
+                try (final ServerSocket serverSocket = new ServerSocket(getPort())) {
                     while (true) {
                         Socket socket = serverSocket.accept();
 
@@ -119,7 +117,7 @@ public class HybridServer implements AutoCloseable {
     public void close() {
         this.stop = true;
 
-        try (Socket socket = new Socket("localhost", SERVICE_PORT)) {
+        try (Socket socket = new Socket("localhost", getPort())) {
             // Esta conexión se hace, simplemente, para "despertar" el hilo servidor
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -167,7 +165,7 @@ public class HybridServer implements AutoCloseable {
 
     private String insertFooter(){
         String footer =
-                new StringBuilder().append("<hr><footer><a href=http://${ip_server}:").append(SERVICE_PORT).append(">Volver al inicio</a></footer>").toString();
+                new StringBuilder().append("<hr><footer><a href=http://${ip_server}:").append(getPort()).append(">Volver al inicio</a></footer>").toString();
 
         return footer.replace("${ip_server}", "localhost");
     }
