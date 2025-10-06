@@ -23,6 +23,8 @@ public class HybridServer implements AutoCloseable {
     private boolean stop;
     private static int numClients;
 
+    private ExecutorService executor;
+
     protected static Map<String,String> pages = new ConcurrentHashMap<>();
     private Connection connection;
 
@@ -39,6 +41,8 @@ public class HybridServer implements AutoCloseable {
         // TODO Inicializar con los parámetros recibidos
         SERVICE_PORT = Integer.parseInt(properties.getProperty("port", "8888"));
         numClients = Integer.parseInt(properties.getProperty("numClients", "50")); // En caso de que no se reciba el contenido, pone por defecto a 50
+
+        executor = Executors.newFixedThreadPool(numClients);
 
         // Creamos conexion con la base de datos (Falta saber como iniciar la jdbc)
         /*
@@ -64,7 +68,6 @@ public class HybridServer implements AutoCloseable {
                         Socket socket = serverSocket.accept();
 
                         // Pool de hilos (Para cuando los clientes se conectan al servidor)
-                        ExecutorService executor = Executors.newFixedThreadPool(numClients);
                         executor.submit(new ClientThread(socket));
                         // ----------------
                         if (stop)
@@ -95,6 +98,8 @@ public class HybridServer implements AutoCloseable {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+
+        if(executor != null) executor.shutdown();
 
         this.serverThread = null;
     }
